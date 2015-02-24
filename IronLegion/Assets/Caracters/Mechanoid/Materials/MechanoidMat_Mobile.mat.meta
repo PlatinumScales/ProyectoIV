@@ -1,0 +1,11 @@
+fileFormatVersion: 2
+guid: 44113d0bc9f81f7419c522c0cf9d709d
+labels:
+- Environment
+- Material
+- Shader
+- Reflection
+- Texture
+- Textured
+NativeFormatImporter:
+  userData: 

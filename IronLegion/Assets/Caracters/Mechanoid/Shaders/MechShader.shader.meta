@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 0c76bf731127ea149ad39959aded9b8e
+labels:
+- Material
+- Environment
+- Reflection
+- Mapping
+- ShaderForge
+- Shader
+- Texture
+- Textured
+- Coded
+- Script
+ShaderImporter:
+  defaultTextures: []
+  userData: 

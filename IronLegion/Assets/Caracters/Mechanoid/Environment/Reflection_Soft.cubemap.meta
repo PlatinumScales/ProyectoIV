@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: b7c4beed3abde52479c474e961cf1bbb
+labels:
+- Lightmapped
+- Texture
+- Textured
+- Cubemap
+- Reflection
+- Environment
+- Mapping
+- Material
+NativeFormatImporter:
+  userData: 

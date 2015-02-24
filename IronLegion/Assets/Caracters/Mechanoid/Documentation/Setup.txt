@@ -1,0 +1,21 @@
+Hello again!
+
+This section is just a short instruction into changing your local input manager settings so that the 'MechControlScript' can access your keyboard inputs, apply them to variables and ultimately, make your mech move! So, quiet important.
+
+
+Firstly, locate your input manager by going to Edit>Project Settings>Input
+
+Well done, now add a new input (add 1 to the size) or reuse an input that currently isn't being used. Call it Shift and in the 'Positive Button' box, write “left shift”, the 'Negative Button' should be empty as well as the 'Alt Positive' and 'Alt Negative'.
+
+Secondly, add another input and call is Shift2 with the 'Positive Button' box set to “e”, the 'Negative Button' should be empty as well as the 'Alt Positive' and 'Alt Negative'.
+
+Thirdly, the input “Fire2” should already exist and needs just “left alt” entering into the 'Positive Button' box. If this is not there, then make a new one.
+
+Finally, the input “Fire1” needs “left ctrl” entering into the 'Positive Button' and delete the mouse 0 from the 'Alt Positive Button' box.
+
+
+
+Double check there are NO INPUT DUPLICATES (e.g – multiple Fire1,2&3's) as this may ruin the controller. Also, make sure you have copied the inputs EXACTLY (“minus quotation marks”), they are case sensitive. Now you should be ready, hit play on the 'mech' scene and have fun!
+
+Thanks again! :)
+ebutler3D
