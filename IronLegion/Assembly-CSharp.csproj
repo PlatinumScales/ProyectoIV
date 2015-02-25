@@ -70,6 +70,7 @@
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiFrame.cs" />
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiStyle.cs" />
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiStyleSet.cs" />
+     <Compile Include="Assets\Scripts\PlanetaryRotation.cs" />
      <None Include="Assets\Caracters\Mechanoid\Documentation\Setup.txt" />
      <None Include="Assets\Caracters\Mechanoid\Documentation\Thank You!.txt" />
      <None Include="Assets\Caracters\Mechanoid\Shaders\MechShader.shader" />
