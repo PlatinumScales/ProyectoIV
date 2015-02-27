@@ -84,6 +84,8 @@
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiFrame.cs" />
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiStyle.cs" />
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiStyleSet.cs" />
+     <Compile Include="Assets\Scripts\GuiManager.cs" />
+     <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\PlanetaryRotation.cs" />
      <None Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
