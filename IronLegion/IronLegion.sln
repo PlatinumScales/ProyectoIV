@@ -9,6 +9,10 @@ Project("{00478462-AEFD-D0AA-E4CB-F901903C5080}") = "IronLegion", "Assembly-CSha
 EndProject
 Project("{00478462-AEFD-D0AA-E4CB-F901903C5080}") = "IronLegion", "Assembly-UnityScript-firstpass.unityproj", "{38398AA3-3714-52E4-FAB2-821FFC04DDA3}"
 EndProject
+Project("{00478462-AEFD-D0AA-E4CB-F901903C5080}") = "IronLegion", "Assembly-UnityScript.unityproj", "{703F1708-EB10-7D15-C86A-5FEAD9DC1FBC}"
+EndProject
+Project("{00478462-AEFD-D0AA-E4CB-F901903C5080}") = "IronLegion", "Assembly-UnityScript-Editor.unityproj", "{95BEAEF5-E2ED-9C2F-4AE6-49A7DC26C1BC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,11 +35,19 @@ Global
 		{38398AA3-3714-52E4-FAB2-821FFC04DDA3}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{38398AA3-3714-52E4-FAB2-821FFC04DDA3}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{38398AA3-3714-52E4-FAB2-821FFC04DDA3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{703F1708-EB10-7D15-C86A-5FEAD9DC1FBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{703F1708-EB10-7D15-C86A-5FEAD9DC1FBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{703F1708-EB10-7D15-C86A-5FEAD9DC1FBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{703F1708-EB10-7D15-C86A-5FEAD9DC1FBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95BEAEF5-E2ED-9C2F-4AE6-49A7DC26C1BC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95BEAEF5-E2ED-9C2F-4AE6-49A7DC26C1BC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95BEAEF5-E2ED-9C2F-4AE6-49A7DC26C1BC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95BEAEF5-E2ED-9C2F-4AE6-49A7DC26C1BC}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
-																							GlobalSection(MonoDevelopProperties) = preSolution
+																													GlobalSection(MonoDevelopProperties) = preSolution
 		StartupItem = Assembly-CSharp.csproj
 		Policies = $0
 		$0.TextStylePolicy = $1
