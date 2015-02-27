@@ -84,6 +84,8 @@
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiFrame.cs" />
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiStyle.cs" />
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiStyleSet.cs" />
+     <Compile Include="Assets\Scripts\AutoFade.cs" />
+     <Compile Include="Assets\Scripts\DelayScript.cs" />
      <Compile Include="Assets\Scripts\GuiManager.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\PlanetaryRotation.cs" />
