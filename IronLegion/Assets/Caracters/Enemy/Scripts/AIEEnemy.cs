@@ -148,7 +148,7 @@ public class AIEEnemy : MonoBehaviour {
 		Debug.Log ("OnTriggerEnter");
 		if (vEnemyLife != 0) {
 			
-			GameObject.Find (gameObject.name).audio.Play ();
+			GameObject.Find (gameObject.name).GetComponent<AudioSource>().Play ();
 			//if (gameObject.name.Contains ("EnemySpider")) {
 			//Debug.Log("ataca");
 			vNav.Stop (true);

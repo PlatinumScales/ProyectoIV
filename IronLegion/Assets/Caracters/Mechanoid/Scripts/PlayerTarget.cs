@@ -42,7 +42,7 @@ public class PlayerTarget : MonoBehaviour
 	private void Start()
 	{
 
-		gui = guiTexture;
+		gui = GetComponent<GUITexture>();
 		
 		gui.pixelInset = new Rect (-target.width * 0.5f, -target.height * 0.5f, target.width, target.height);
 		gui.texture = target;

@@ -32,7 +32,7 @@ public class ThirdPersonCamera : MonoBehaviour
 
 
 
-		Screen.showCursor = false;
+		Cursor.visible = false;
 		Screen.lockCursor = true;
 		
 
@@ -59,7 +59,7 @@ public class ThirdPersonCamera : MonoBehaviour
 		}
 
 		if (lockScreen) {
-			Screen.showCursor = !Screen.showCursor;
+			Cursor.visible = !Cursor.visible;
 			//Screen.lockCursor = !Screen.lockCursor;
 		}
 

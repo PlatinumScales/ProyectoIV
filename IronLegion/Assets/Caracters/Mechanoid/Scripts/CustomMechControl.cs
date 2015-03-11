@@ -104,30 +104,31 @@ public class CustomMechControl : MonoBehaviour {
 		
 		//Particle Systems OFF!
 		
-		mainEngine.particleSystem.enableEmission = false;
-		mainEngineInner.particleSystem.enableEmission = false;
-		mainEngineSmallBits.particleSystem.enableEmission = false;
-		mainEngineLight.light.intensity = 0;
+		mainEngine.GetComponent<ParticleSystem>().enableEmission = false;
+		mainEngineInner.GetComponent<ParticleSystem>().enableEmission = false;
+		mainEngineSmallBits.GetComponent<ParticleSystem>().enableEmission = false;
+		mainEngineLight.GetComponent<Light>().intensity = 0;
 		
-		backheadLightL.light.intensity = 0;
-		backheadLightR.light.intensity = 0;
-		frontheadLight.light.intensity = 0;
-		mouthLightL.light.intensity = 0;
-		mouthLightR.light.intensity = 0;
+		backheadLightL.GetComponent<Light>().intensity = 0;
+		backheadLightR.GetComponent<Light>().intensity = 0;
+		frontheadLight.GetComponent<Light>().intensity = 0;
+		mouthLightL.GetComponent<Light>().intensity = 0;
+		mouthLightR.GetComponent<Light>().intensity = 0;
 		
-		backEngineL.particleSystem.enableEmission = false;
-		backEngineR.particleSystem.enableEmission = false;
-		backEngineLightL.light.intensity = 0;
-		backEngineLightR.light.intensity = 0;
-		backEngineInnerL.particleSystem.enableEmission = false;
-		backEngineInnerR.particleSystem.enableEmission = false;
-		backEngineSmokeDownL.particleSystem.enableEmission = false;
-		backEngineSmokeOutL.particleSystem.enableEmission = false;
-		backEngineSmokeDownR.particleSystem.enableEmission = false;
-		backEngineSmokeOutR.particleSystem.enableEmission = false;
-	
+		backEngineL.GetComponent<ParticleSystem>().enableEmission = false;
+		backEngineR.GetComponent<ParticleSystem>().enableEmission = false;
+		backEngineLightL.GetComponent<Light>().intensity = 0;
+		backEngineLightR.GetComponent<Light>().intensity = 0;
+		backEngineInnerL.GetComponent<ParticleSystem>().enableEmission = false;
+		backEngineInnerR.GetComponent<ParticleSystem>().enableEmission = false;
+		backEngineSmokeDownL.GetComponent<ParticleSystem>().enableEmission = false;
+		backEngineSmokeOutL.GetComponent<ParticleSystem>().enableEmission = false;
+		backEngineSmokeDownR.GetComponent<ParticleSystem>().enableEmission = false;
+		backEngineSmokeOutR.GetComponent<ParticleSystem>().enableEmission = false;
+
 		
 		anim.SetBool("StartUp", true);
+		Debug.Log ("12");
 		startLights = true;
 		Instantiate(dustStart, transform.position, transform.rotation);
 		anim.SetBool ("Death1", false);
@@ -162,25 +163,25 @@ public class CustomMechControl : MonoBehaviour {
 		
 		if(startLights == true)
 		{
-			mainEngineLight.light.intensity = Mathf.Lerp(mainEngineLight.light.intensity, 3 ,3 * Time.deltaTime);
-			backheadLightL.light.intensity = Mathf.Lerp(backheadLightL.light.intensity, 2 ,3 * Time.deltaTime);
-			backheadLightR.light.intensity = Mathf.Lerp(backheadLightR.light.intensity, 2 ,3 * Time.deltaTime);
-			backEngineLightL.light.intensity = Mathf.Lerp(backEngineLightL.light.intensity, 2 ,3 * Time.deltaTime);
-			backEngineLightR.light.intensity = Mathf.Lerp(backEngineLightR.light.intensity, 2 ,3 * Time.deltaTime);
+			mainEngineLight.GetComponent<Light>().intensity = Mathf.Lerp(mainEngineLight.GetComponent<Light>().intensity, 3 ,3 * Time.deltaTime);
+			backheadLightL.GetComponent<Light>().intensity = Mathf.Lerp(backheadLightL.GetComponent<Light>().intensity, 2 ,3 * Time.deltaTime);
+			backheadLightR.GetComponent<Light>().intensity = Mathf.Lerp(backheadLightR.GetComponent<Light>().intensity, 2 ,3 * Time.deltaTime);
+			backEngineLightL.GetComponent<Light>().intensity = Mathf.Lerp(backEngineLightL.GetComponent<Light>().intensity, 2 ,3 * Time.deltaTime);
+			backEngineLightR.GetComponent<Light>().intensity = Mathf.Lerp(backEngineLightR.GetComponent<Light>().intensity, 2 ,3 * Time.deltaTime);
 			
-			mainEngine.particleSystem.enableEmission = true;
-			mainEngine.particleSystem.renderer.material.SetColor("_TintColor", EngineLow);
+			mainEngine.GetComponent<ParticleSystem>().enableEmission = true;
+			mainEngine.GetComponent<ParticleSystem>().GetComponent<Renderer>().material.SetColor("_TintColor", EngineLow);
 			//mainEngineInner.particleSystem.enableEmission = true;
 			//mainEngineInner.particleSystem.renderer.material.SetColor("_TintColor", EngineLow);
-			mainEngineSmallBits.particleSystem.enableEmission = true;
-			backEngineL.particleSystem.enableEmission = true;
-			backEngineL.particleSystem.renderer.material.SetColor("_TintColor", EngineLow);
-			backEngineR.particleSystem.enableEmission = true;
-			backEngineR.particleSystem.renderer.material.SetColor("_TintColor", EngineLow);
+			mainEngineSmallBits.GetComponent<ParticleSystem>().enableEmission = true;
+			backEngineL.GetComponent<ParticleSystem>().enableEmission = true;
+			backEngineL.GetComponent<ParticleSystem>().GetComponent<Renderer>().material.SetColor("_TintColor", EngineLow);
+			backEngineR.GetComponent<ParticleSystem>().enableEmission = true;
+			backEngineR.GetComponent<ParticleSystem>().GetComponent<Renderer>().material.SetColor("_TintColor", EngineLow);
 			
-			frontheadLight.light.intensity = Mathf.Lerp(frontheadLight.light.intensity, 5 ,3 * Time.deltaTime);
-			mouthLightL.light.intensity = Mathf.Lerp(mouthLightL.light.intensity, 4 ,3 * Time.deltaTime);
-			mouthLightR.light.intensity = Mathf.Lerp(mouthLightR.light.intensity, 4 ,3 * Time.deltaTime);
+			frontheadLight.GetComponent<Light>().intensity = Mathf.Lerp(frontheadLight.GetComponent<Light>().intensity, 5 ,3 * Time.deltaTime);
+			mouthLightL.GetComponent<Light>().intensity = Mathf.Lerp(mouthLightL.GetComponent<Light>().intensity, 4 ,3 * Time.deltaTime);
+			mouthLightR.GetComponent<Light>().intensity = Mathf.Lerp(mouthLightR.GetComponent<Light>().intensity, 4 ,3 * Time.deltaTime);
 			
 		}
 		
@@ -221,19 +222,19 @@ public class CustomMechControl : MonoBehaviour {
 		
 		if (currentBaseState.nameHash == runState)
 		{
-			backEngineLightL.light.intensity = Mathf.Lerp(backEngineLightL.light.intensity, 8 ,3 * Time.deltaTime);
-			backEngineLightR.light.intensity = Mathf.Lerp(backEngineLightR.light.intensity, 8 ,3 * Time.deltaTime);
-			mainEngineLight.light.intensity = Mathf.Lerp(mainEngineLight.light.intensity, 8 ,3 * Time.deltaTime);
-			mouthLightL.light.intensity = Mathf.Lerp(mouthLightL.light.intensity, 8 ,3 * Time.deltaTime);
-			mouthLightR.light.intensity = Mathf.Lerp(mouthLightR.light.intensity, 8 ,3 * Time.deltaTime);
-			mainEngineInner.particleSystem.enableEmission = true;
-			mainEngine.particleSystem.renderer.material.SetColor("_TintColor", EngineHigh);
-			mainEngineInner.particleSystem.renderer.material.SetColor("_TintColor", EngineHigh);
+			backEngineLightL.GetComponent<Light>().intensity = Mathf.Lerp(backEngineLightL.GetComponent<Light>().intensity, 8 ,3 * Time.deltaTime);
+			backEngineLightR.GetComponent<Light>().intensity = Mathf.Lerp(backEngineLightR.GetComponent<Light>().intensity, 8 ,3 * Time.deltaTime);
+			mainEngineLight.GetComponent<Light>().intensity = Mathf.Lerp(mainEngineLight.GetComponent<Light>().intensity, 8 ,3 * Time.deltaTime);
+			mouthLightL.GetComponent<Light>().intensity = Mathf.Lerp(mouthLightL.GetComponent<Light>().intensity, 8 ,3 * Time.deltaTime);
+			mouthLightR.GetComponent<Light>().intensity = Mathf.Lerp(mouthLightR.GetComponent<Light>().intensity, 8 ,3 * Time.deltaTime);
+			mainEngineInner.GetComponent<ParticleSystem>().enableEmission = true;
+			mainEngine.GetComponent<ParticleSystem>().GetComponent<Renderer>().material.SetColor("_TintColor", EngineHigh);
+			mainEngineInner.GetComponent<ParticleSystem>().GetComponent<Renderer>().material.SetColor("_TintColor", EngineHigh);
 			if (currentBaseState.nameHash == runState && Input.GetButtonUp("Shift"))
 			{
 				anim.SetBool("Run", false);
-				mainEngine.particleSystem.renderer.material.SetColor("_TintColor", EngineLow);
-				mainEngineInner.particleSystem.renderer.material.SetColor("_TintColor", EngineLow);
+				mainEngine.GetComponent<ParticleSystem>().GetComponent<Renderer>().material.SetColor("_TintColor", EngineLow);
+				mainEngineInner.GetComponent<ParticleSystem>().GetComponent<Renderer>().material.SetColor("_TintColor", EngineLow);
 			}
 		}
 		
@@ -243,10 +244,10 @@ public class CustomMechControl : MonoBehaviour {
 		
 		if (currentBaseState.nameHash == walkState)
 		{
-			mainEngineLight.light.intensity = Mathf.Lerp(mainEngineLight.light.intensity, 6 ,3 * Time.deltaTime);
-			mainEngineInner.particleSystem.enableEmission = false;
-			mouthLightL.light.intensity = Mathf.Lerp(mouthLightL.light.intensity, 7 ,3 * Time.deltaTime);
-			mouthLightR.light.intensity = Mathf.Lerp(mouthLightR.light.intensity, 7 ,3 * Time.deltaTime);
+			mainEngineLight.GetComponent<Light>().intensity = Mathf.Lerp(mainEngineLight.GetComponent<Light>().intensity, 6 ,3 * Time.deltaTime);
+			mainEngineInner.GetComponent<ParticleSystem>().enableEmission = false;
+			mouthLightL.GetComponent<Light>().intensity = Mathf.Lerp(mouthLightL.GetComponent<Light>().intensity, 7 ,3 * Time.deltaTime);
+			mouthLightR.GetComponent<Light>().intensity = Mathf.Lerp(mouthLightR.GetComponent<Light>().intensity, 7 ,3 * Time.deltaTime);
 		}
 		
 		
@@ -262,21 +263,21 @@ public class CustomMechControl : MonoBehaviour {
 		
 		if(layer2CurrentState.nameHash == death1State | layer2CurrentState.nameHash == death2State)
 		{
-			mainEngineLight.light.intensity = Mathf.Lerp(mainEngineLight.light.intensity, 0 ,3 * Time.deltaTime);
-			backheadLightL.light.intensity = Mathf.Lerp(backheadLightL.light.intensity, 0 ,3 * Time.deltaTime);
-			backheadLightR.light.intensity = Mathf.Lerp(backheadLightR.light.intensity, 0 ,3 * Time.deltaTime);
-			backEngineLightL.light.intensity = Mathf.Lerp(backEngineLightL.light.intensity, 0 ,3 * Time.deltaTime);
-			backEngineLightR.light.intensity = Mathf.Lerp(backEngineLightR.light.intensity, 0 ,3 * Time.deltaTime);
+			mainEngineLight.GetComponent<Light>().intensity = Mathf.Lerp(mainEngineLight.GetComponent<Light>().intensity, 0 ,3 * Time.deltaTime);
+			backheadLightL.GetComponent<Light>().intensity = Mathf.Lerp(backheadLightL.GetComponent<Light>().intensity, 0 ,3 * Time.deltaTime);
+			backheadLightR.GetComponent<Light>().intensity = Mathf.Lerp(backheadLightR.GetComponent<Light>().intensity, 0 ,3 * Time.deltaTime);
+			backEngineLightL.GetComponent<Light>().intensity = Mathf.Lerp(backEngineLightL.GetComponent<Light>().intensity, 0 ,3 * Time.deltaTime);
+			backEngineLightR.GetComponent<Light>().intensity = Mathf.Lerp(backEngineLightR.GetComponent<Light>().intensity, 0 ,3 * Time.deltaTime);
 			
-			mainEngine.particleSystem.enableEmission = false;
-			mainEngineInner.particleSystem.enableEmission = false;
-			mainEngineSmallBits.particleSystem.enableEmission = false;
-			backEngineL.particleSystem.enableEmission = false;
-			backEngineR.particleSystem.enableEmission = false;
+			mainEngine.GetComponent<ParticleSystem>().enableEmission = false;
+			mainEngineInner.GetComponent<ParticleSystem>().enableEmission = false;
+			mainEngineSmallBits.GetComponent<ParticleSystem>().enableEmission = false;
+			backEngineL.GetComponent<ParticleSystem>().enableEmission = false;
+			backEngineR.GetComponent<ParticleSystem>().enableEmission = false;
 			
-			frontheadLight.light.intensity = Mathf.Lerp(frontheadLight.light.intensity, 0 ,3 * Time.deltaTime);
-			mouthLightL.light.intensity = Mathf.Lerp(mouthLightL.light.intensity, 0 ,3 * Time.deltaTime);
-			mouthLightR.light.intensity = Mathf.Lerp(mouthLightR.light.intensity, 0 ,3 * Time.deltaTime);
+			frontheadLight.GetComponent<Light>().intensity = Mathf.Lerp(frontheadLight.GetComponent<Light>().intensity, 0 ,3 * Time.deltaTime);
+			mouthLightL.GetComponent<Light>().intensity = Mathf.Lerp(mouthLightL.GetComponent<Light>().intensity, 0 ,3 * Time.deltaTime);
+			mouthLightR.GetComponent<Light>().intensity = Mathf.Lerp(mouthLightR.GetComponent<Light>().intensity, 0 ,3 * Time.deltaTime);
 		}
 		
 		//SHOOT and shoot reset
@@ -330,31 +331,31 @@ public class CustomMechControl : MonoBehaviour {
 		{
 			//mainEngine.particleSystem.renderer.material.SetColor("_TintColor", EngineHigh);
 			//mainEngineInner.particleSystem.renderer.material.SetColor("_TintColor", EngineHigh);
-			backEngineL.particleSystem.renderer.material.SetColor("_TintColor", EngineHigh);
-			backEngineR.particleSystem.renderer.material.SetColor("_TintColor", EngineHigh);
+			backEngineL.GetComponent<ParticleSystem>().GetComponent<Renderer>().material.SetColor("_TintColor", EngineHigh);
+			backEngineR.GetComponent<ParticleSystem>().GetComponent<Renderer>().material.SetColor("_TintColor", EngineHigh);
 		}
 		
 		if (currentBaseState.nameHash == hoverState | currentBaseState.nameHash == hoverfwdState)
 		{
-			backEngineL.particleSystem.renderer.material.SetColor("_TintColor", EngineHigh);
-			backEngineR.particleSystem.renderer.material.SetColor("_TintColor", EngineHigh);
-			backEngineInnerL.particleSystem.enableEmission = true;
-			backEngineInnerR.particleSystem.enableEmission = true;
-			backEngineInnerL.particleSystem.renderer.material.SetColor("_TintColor", EngineHover);
-			backEngineInnerR.particleSystem.renderer.material.SetColor("_TintColor", EngineHover);
-			backEngineSmokeDownL.particleSystem.enableEmission = true;
-			backEngineSmokeOutL.particleSystem.enableEmission = true;
-			backEngineSmokeDownR.particleSystem.enableEmission = true;
-			backEngineSmokeOutR.particleSystem.enableEmission = true;
+			backEngineL.GetComponent<ParticleSystem>().GetComponent<Renderer>().material.SetColor("_TintColor", EngineHigh);
+			backEngineR.GetComponent<ParticleSystem>().GetComponent<Renderer>().material.SetColor("_TintColor", EngineHigh);
+			backEngineInnerL.GetComponent<ParticleSystem>().enableEmission = true;
+			backEngineInnerR.GetComponent<ParticleSystem>().enableEmission = true;
+			backEngineInnerL.GetComponent<ParticleSystem>().GetComponent<Renderer>().material.SetColor("_TintColor", EngineHover);
+			backEngineInnerR.GetComponent<ParticleSystem>().GetComponent<Renderer>().material.SetColor("_TintColor", EngineHover);
+			backEngineSmokeDownL.GetComponent<ParticleSystem>().enableEmission = true;
+			backEngineSmokeOutL.GetComponent<ParticleSystem>().enableEmission = true;
+			backEngineSmokeDownR.GetComponent<ParticleSystem>().enableEmission = true;
+			backEngineSmokeOutR.GetComponent<ParticleSystem>().enableEmission = true;
 		}
 		
 		if (currentBaseState.nameHash == landState | currentBaseState.nameHash == landfwdState)
 		{
-			mainEngine.particleSystem.renderer.material.SetColor("_TintColor", EngineLow);
-			mainEngineInner.particleSystem.renderer.material.SetColor("_TintColor", EngineLow);
+			mainEngine.GetComponent<ParticleSystem>().GetComponent<Renderer>().material.SetColor("_TintColor", EngineLow);
+			mainEngineInner.GetComponent<ParticleSystem>().GetComponent<Renderer>().material.SetColor("_TintColor", EngineLow);
 			inAir = false;
-			backEngineInnerL.particleSystem.enableEmission = false;
-			backEngineInnerR.particleSystem.enableEmission = false;
+			backEngineInnerL.GetComponent<ParticleSystem>().enableEmission = false;
+			backEngineInnerR.GetComponent<ParticleSystem>().enableEmission = false;
 			if (Time.time >= dustTime)
 			{
 				Instantiate(dustStart, transform.position, transform.rotation);
@@ -390,22 +391,22 @@ public class CustomMechControl : MonoBehaviour {
 		
 		if (currentBaseState.nameHash == jumpState | currentBaseState.nameHash == jumpfwdState)
 		{
-			backEngineSmokeDownL.particleSystem.enableEmission = true;
-			backEngineSmokeDownR.particleSystem.enableEmission = true;
+			backEngineSmokeDownL.GetComponent<ParticleSystem>().enableEmission = true;
+			backEngineSmokeDownR.GetComponent<ParticleSystem>().enableEmission = true;
 		}
 		
 		if (currentBaseState.nameHash == hoverState | currentBaseState.nameHash == hoverfwdState)
 		{
-			backEngineSmokeOutR.particleSystem.enableEmission = true;
-			backEngineSmokeOutL.particleSystem.enableEmission = true;
+			backEngineSmokeOutR.GetComponent<ParticleSystem>().enableEmission = true;
+			backEngineSmokeOutL.GetComponent<ParticleSystem>().enableEmission = true;
 		}
 		
 		else
 		{
-			backEngineSmokeDownL.particleSystem.enableEmission = false;
-			backEngineSmokeOutL.particleSystem.enableEmission = false;
-			backEngineSmokeDownR.particleSystem.enableEmission = false;
-			backEngineSmokeOutR.particleSystem.enableEmission = false;
+			backEngineSmokeDownL.GetComponent<ParticleSystem>().enableEmission = false;
+			backEngineSmokeOutL.GetComponent<ParticleSystem>().enableEmission = false;
+			backEngineSmokeDownR.GetComponent<ParticleSystem>().enableEmission = false;
+			backEngineSmokeOutR.GetComponent<ParticleSystem>().enableEmission = false;
 		}
 		
 		
