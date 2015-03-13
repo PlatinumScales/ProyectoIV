@@ -11,11 +11,13 @@ public class Health : MonoBehaviour
 		public float regenDelay = 0;
 		public float maxRegenDelay = 5;
 		public float regenRate = 20;
+	GameObject vLocalPlayer;
 
 		// Use this for initialization
 		void Start ()
 		{
 				regenDelay = 0;
+
 		}
 	
 		// Update is called once per frame
@@ -43,5 +45,17 @@ public class Health : MonoBehaviour
 		
 				}
 		regenDelay = 0;
+
+		if (currentHealth<=0) {
+            //MUERTE DEL PERSONAJE
+			vLocalPlayer = GameObject.FindGameObjectWithTag ("Player");
+			Animator animator = vLocalPlayer.GetComponent<Animator> ();	
+			animator.SetBool ("Death2", true);
+			
+			 
+
+		}
+
+
 		}
 }

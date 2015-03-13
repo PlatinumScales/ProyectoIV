@@ -8,7 +8,7 @@ public class AIEEnemy : MonoBehaviour {
 	NavMeshAgent vNav;
 	GameObject vLocalPlayer;
 	private float vRotationDamping=10;
-	 
+	private bool IsAttack=false;
 	public float distanceFromTarget  = 4.0f;
 	public Transform vTarget;
 	private Vector3 startPosition;  
@@ -96,7 +96,7 @@ public class AIEEnemy : MonoBehaviour {
 	void OnTriggerExit(Collider other){
 
 		Debug.Log ("OnTriggerExit");
-
+		IsAttack = false;
 		//Debug.Log("Patroling..." + vEnemyLife);
 		if (vEnemyLife != 0) {
 		Debug.Log(gameObject.name);
@@ -113,8 +113,37 @@ public class AIEEnemy : MonoBehaviour {
 
 
 	void OnTriggerEnter(Collider other){
-		Attack ();
+		if(other.gameObject.tag == "Player"){
+			IsAttack=true;
+		    Attack ();
+
+			int i = 1;
+			while (i < 100 && IsAttack )
+			{
+				Invoke ("ApplyDamage",i);
+
+				i++;
+			}
+
+				
+		}
+		 
+			
+		 
+
 	}
+
+	private void ApplyDamage(){
+		vLocalPlayer.GetComponent<Health>().ApplyDamage(2);
+
+		//TODO PENDIENTE
+		//Animator animator = vLocalPlayer.GetComponent<Animator> ();
+
+		//animator.SetBool ("HitF", true);
+		 
+			 
+    }
+
 
 
 
@@ -145,7 +174,7 @@ public class AIEEnemy : MonoBehaviour {
 	 
 
 	void Attack(){
-		Debug.Log ("OnTriggerEnter");
+		//Debug.Log ("OnTriggerEnter");
 		if (vEnemyLife != 0) {
 			
 			GameObject.Find (gameObject.name).GetComponent<AudioSource>().Play ();
@@ -155,23 +184,9 @@ public class AIEEnemy : MonoBehaviour {
 			
 			Animator animator = GameObject.Find (gameObject.name).GetComponent<Animator> ();
 			animator.SetBool ("Bite", true); 
-			 
 
-			RaycastHit hit;
-			if(Physics.Raycast(transform.position,transform.forward,out hit)){
-				
-				if(hit.collider.gameObject.tag == "Player"){
-					hit.collider.gameObject.GetComponent<HealthPlayerScript>().vHealth -= 5f;
-					Debug.Log("Player Life..." + hit.collider.gameObject.GetComponent<HealthPlayerScript>().vHealth );
-					
-				}
 
-			//Debug.Log(other.tag);
-			//restLife (gameObject.name,5);
-			//}
-			
-		}
-	
+
 
 	    }
 

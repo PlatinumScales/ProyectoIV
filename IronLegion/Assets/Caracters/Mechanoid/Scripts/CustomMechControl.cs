@@ -128,7 +128,7 @@ public class CustomMechControl : MonoBehaviour {
 
 		
 		anim.SetBool("StartUp", true);
-		Debug.Log ("12");
+
 		startLights = true;
 		Instantiate(dustStart, transform.position, transform.rotation);
 		anim.SetBool ("Death1", false);
