@@ -13,6 +13,7 @@ public class AIEEnemy : MonoBehaviour {
 	public Transform vTarget;
 	private Vector3 startPosition;  
 	private float wanderSpeed = 5f; //Give it the movement speeds
+	private bool vFriendInDanger = false;
 
 	private  int vEnemyLife=30;
 	 
@@ -60,7 +61,7 @@ public class AIEEnemy : MonoBehaviour {
 						vNav.speed = wanderSpeed;
 						startPosition = this.transform.position;
 						//Start Wandering
-						InvokeRepeating ("Wander", 2f, 20f);
+						InvokeRepeating ("Wander", 3f, 20f);
 				}
 	}
 
@@ -68,9 +69,9 @@ public class AIEEnemy : MonoBehaviour {
 
 	void Wander(){
 		//Pick a random location within wander-range of the start position and send the agent there
-		Vector3 destination = startPosition + new Vector3(Random.Range (-50, 100),
+		Vector3 destination = startPosition + new Vector3(Random.Range (-45, 100),
 		                                                  0,
-		                                                  Random.Range (-50, 150));
+		                                                  Random.Range (-35, 150));
 		NewDestination(destination);
 	}
 	//Creating this as it's own method so we can send it directions other when it's just wandering.
@@ -85,12 +86,12 @@ public class AIEEnemy : MonoBehaviour {
 
 	
 	void Start () {
-		//Debug.Log ("Inicio vida:" + vEnemyLife);
+		 
 		          if (vEnemyLife != 0) {
-			//Debug.Log("Patroling..." + vEnemyLife);
-			PatrolTerrain ();
-		}
-		gameObject.name = gameObject.GetInstanceID().ToString();
+			 
+			                PatrolTerrain ();
+		            }
+		           gameObject.name = gameObject.GetInstanceID().ToString();
 	}
 	
 	void OnTriggerExit(Collider other){
@@ -154,12 +155,20 @@ public class AIEEnemy : MonoBehaviour {
 		 
 		if (vEnemyLife!=0) {
 						var dist = Vector3.Distance (vTarget.position, transform.position);
-						if (dist < 25f) {
-
-								LookAtPlayer ();
-								vNav.SetDestination (vTarget.position);
+						if (dist < 25f ) {
 				               
+								LookAtPlayer ();
+								
 						}
+			 
+						if(vFriendInDanger)
+						{
+				      
+							LookAtPlayer ();
+						}
+
+
+
 				}
 	
 
@@ -167,8 +176,11 @@ public class AIEEnemy : MonoBehaviour {
 
 	void LookAtPlayer(){
 
+
 		Quaternion vRotation = Quaternion.LookRotation(vTarget.position - transform.position);
 		transform.rotation = Quaternion.Slerp(transform.rotation,vRotation,Time.deltaTime * vRotationDamping);
+
+		vNav.SetDestination (vTarget.position);
 		 
 	}
 
@@ -185,6 +197,7 @@ public class AIEEnemy : MonoBehaviour {
 			
 			Animator animator = GameObject.Find (gameObject.name).GetComponent<Animator> ();
 			animator.SetBool ("Bite", true); 
+			vFriendInDanger=true;
 
 
 

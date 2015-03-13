@@ -81,6 +81,7 @@
      <None Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlowEffectDownsample.shader" />
      <None Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\CreaseApply.shader" />
      <None Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ChromaticAberrationShader.shader" />
+     <None Include="Assets\Caracters\HealthItem\Nobiax Free Gaz Tank\Nobiax Free Gaz Tank.txt" />
      <None Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\GlobalFog.shader" />
      <None Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\Contrast Stretch\Luminance.shader" />
      <None Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\ColorCorrectionSelective.shader" />
