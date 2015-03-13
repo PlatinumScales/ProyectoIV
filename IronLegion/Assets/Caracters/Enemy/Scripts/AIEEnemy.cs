@@ -42,7 +42,7 @@ public class AIEEnemy : MonoBehaviour {
 	
 	// Use this for initialization
 	void Awake(){
-		 
+		GameObject.Find (gameObject.name).GetComponent<AudioSource>().Play();
 		 vLocalPlayer = GameObject.FindGameObjectWithTag ("Player");
 		vTarget = vLocalPlayer.transform;
 		vNav = GetComponent<NavMeshAgent>();
@@ -60,7 +60,7 @@ public class AIEEnemy : MonoBehaviour {
 						vNav.speed = wanderSpeed;
 						startPosition = this.transform.position;
 						//Start Wandering
-						InvokeRepeating ("Wander", 1f, 5f);
+						InvokeRepeating ("Wander", 2f, 20f);
 				}
 	}
 
@@ -118,7 +118,7 @@ public class AIEEnemy : MonoBehaviour {
 		    Attack ();
 
 			int i = 1;
-			while (i < 100 && IsAttack )
+			while (i < 60 && IsAttack )
 			{
 				Invoke ("ApplyDamage",i);
 
@@ -134,6 +134,7 @@ public class AIEEnemy : MonoBehaviour {
 	}
 
 	private void ApplyDamage(){
+
 		vLocalPlayer.GetComponent<Health>().ApplyDamage(2);
 
 		//TODO PENDIENTE
@@ -165,7 +166,7 @@ public class AIEEnemy : MonoBehaviour {
 	}
 
 	void LookAtPlayer(){
-		 
+
 		Quaternion vRotation = Quaternion.LookRotation(vTarget.position - transform.position);
 		transform.rotation = Quaternion.Slerp(transform.rotation,vRotation,Time.deltaTime * vRotationDamping);
 		 
@@ -176,8 +177,8 @@ public class AIEEnemy : MonoBehaviour {
 	void Attack(){
 		//Debug.Log ("OnTriggerEnter");
 		if (vEnemyLife != 0) {
-			
-			GameObject.Find (gameObject.name).GetComponent<AudioSource>().Play ();
+
+
 			//if (gameObject.name.Contains ("EnemySpider")) {
 			//Debug.Log("ataca");
 			vNav.Stop (true);
