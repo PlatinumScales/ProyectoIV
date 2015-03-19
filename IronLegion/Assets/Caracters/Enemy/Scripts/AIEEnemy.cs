@@ -12,7 +12,7 @@ public class AIEEnemy : MonoBehaviour {
 	public float distanceFromTarget  = 4.0f;
 	public Transform vTarget;
 	private Vector3 startPosition;  
-	private float wanderSpeed = 5f; //Give it the movement speeds
+	private float wanderSpeed = 3f; //Give it the movement speeds
 	private bool vFriendInDanger = false;
 
 	private  int vEnemyLife=30;
@@ -45,8 +45,11 @@ public class AIEEnemy : MonoBehaviour {
 	void Awake(){
 		GameObject.Find (gameObject.name).GetComponent<AudioSource>().Play();
 		 vLocalPlayer = GameObject.FindGameObjectWithTag ("Player");
-		vTarget = vLocalPlayer.transform;
-		vNav = GetComponent<NavMeshAgent>();
+		if (vLocalPlayer != null) {
+						vTarget = vLocalPlayer.transform;
+		}
+						vNav = GetComponent<NavMeshAgent> ();
+				
 		 
 	
 	}
@@ -57,7 +60,9 @@ public class AIEEnemy : MonoBehaviour {
 	void PatrolTerrain (){
 		if (vEnemyLife != 0) {
 						//Debug.Log ("Patrol Vida:" + vEnemyLife);
+			if(vTarget!=null){
 						vNav.SetDestination (vTarget.position);
+			}
 						vNav.speed = wanderSpeed;
 						startPosition = this.transform.position;
 						//Start Wandering
@@ -154,6 +159,7 @@ public class AIEEnemy : MonoBehaviour {
 	void Update () {
 		 
 		if (vEnemyLife!=0) {
+			if(vTarget!=null){
 						var dist = Vector3.Distance (vTarget.position, transform.position);
 						if (dist < 25f ) {
 				               
@@ -167,7 +173,7 @@ public class AIEEnemy : MonoBehaviour {
 							LookAtPlayer ();
 						}
 
-
+			}
 
 				}
 	

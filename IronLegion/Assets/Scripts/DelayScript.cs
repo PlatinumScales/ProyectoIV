@@ -2,10 +2,10 @@
 using System.Collections;
 
 public class DelayScript : MonoBehaviour {
-	public float delayTime = 5;
-	public int nextlevel = 1;
+	public float delayTime = 4;
+	 
 	IEnumerator Start(){
 		yield return new WaitForSeconds (delayTime);
-		AutoFade.LoadLevel (nextlevel ,1,1,Color.black);
+		AutoFade.LoadLevel ("menuUI" ,1,2,Color.gray);
 	}
 }
