@@ -1,7 +1,10 @@
 #################
 ## Eclipse
 #################
-
+*.bin
+*.info
+ShaderCache/
+metadata/
 *.pydevproject
 .project
 .metadata
