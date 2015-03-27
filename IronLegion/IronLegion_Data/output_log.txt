@@ -1,33 +1,57 @@
-Initialize engine version: 4.6.2f1 (bd99309c2ad7)
+Initialize engine version: 5.0.0f4 (5b98b70ebeb9)
 GfxDevice: creating device client; threaded=1
 Direct3D:
     Version:  Direct3D 11.0 [level 11.0]
-    Renderer: Intel(R) HD Graphics Family (ID=0xa16)
-    Vendor:   Intel
-    VRAM:     128 MB
+    Renderer: ATI Radeon HD 5450 (ID=0x68f9)
+    Vendor:   ATI
+    VRAM:     1014 MB
 Begin MonoManager ReloadAssembly
-Platform assembly: C:\Users\Alejandro\Documents\Proyecto4\ProyectoIV\IronLegion\IronLegion_Data\Managed\UnityEngine.dll (this message is harmless)
-Loading C:\Users\Alejandro\Documents\Proyecto4\ProyectoIV\IronLegion\IronLegion_Data\Managed\UnityEngine.dll into Unity Child Domain
-Platform assembly: C:\Users\Alejandro\Documents\Proyecto4\ProyectoIV\IronLegion\IronLegion_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
-Loading C:\Users\Alejandro\Documents\Proyecto4\ProyectoIV\IronLegion\IronLegion_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Alejandro\Documents\Proyecto4\ProyectoIV\IronLegion\IronLegion_Data\Managed\Assembly-CSharp.dll (this message is harmless)
-Loading C:\Users\Alejandro\Documents\Proyecto4\ProyectoIV\IronLegion\IronLegion_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
-Platform assembly: C:\Users\Alejandro\Documents\Proyecto4\ProyectoIV\IronLegion\IronLegion_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
-Loading C:\Users\Alejandro\Documents\Proyecto4\ProyectoIV\IronLegion\IronLegion_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
-Platform assembly: C:\Users\Alejandro\Documents\Proyecto4\ProyectoIV\IronLegion\IronLegion_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
-Loading C:\Users\Alejandro\Documents\Proyecto4\ProyectoIV\IronLegion\IronLegion_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
-Platform assembly: C:\Users\Alejandro\Documents\Proyecto4\ProyectoIV\IronLegion\IronLegion_Data\Managed\UnityEngine.UI.dll (this message is harmless)
-Loading C:\Users\Alejandro\Documents\Proyecto4\ProyectoIV\IronLegion\IronLegion_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
-- Completed reload, in  0.080 seconds
+Platform assembly: E:\PROYECTO4\IronLegion\IronLegion_Data\Managed\UnityEngine.dll (this message is harmless)
+Loading E:\PROYECTO4\IronLegion\IronLegion_Data\Managed\UnityEngine.dll into Unity Child Domain
+Platform assembly: E:\PROYECTO4\IronLegion\IronLegion_Data\Managed\Assembly-CSharp-firstpass.dll (this message is harmless)
+Loading E:\PROYECTO4\IronLegion\IronLegion_Data\Managed\Assembly-CSharp-firstpass.dll into Unity Child Domain
+Platform assembly: E:\PROYECTO4\IronLegion\IronLegion_Data\Managed\Assembly-CSharp.dll (this message is harmless)
+Loading E:\PROYECTO4\IronLegion\IronLegion_Data\Managed\Assembly-CSharp.dll into Unity Child Domain
+Platform assembly: E:\PROYECTO4\IronLegion\IronLegion_Data\Managed\Assembly-UnityScript-firstpass.dll (this message is harmless)
+Loading E:\PROYECTO4\IronLegion\IronLegion_Data\Managed\Assembly-UnityScript-firstpass.dll into Unity Child Domain
+Platform assembly: E:\PROYECTO4\IronLegion\IronLegion_Data\Managed\Assembly-UnityScript.dll (this message is harmless)
+Loading E:\PROYECTO4\IronLegion\IronLegion_Data\Managed\Assembly-UnityScript.dll into Unity Child Domain
+Platform assembly: E:\PROYECTO4\IronLegion\IronLegion_Data\Managed\UnityEngine.UI.dll (this message is harmless)
+Loading E:\PROYECTO4\IronLegion\IronLegion_Data\Managed\UnityEngine.UI.dll into Unity Child Domain
+- Completed reload, in  0.074 seconds
 desktop: 1366x768 60Hz; virtual: 1366x768 at 0,0
 <RI> Initializing input.
-XInput1_3.dll not found.
 <RI> Input initialized.
-Platform assembly: C:\Users\Alejandro\Documents\Proyecto4\ProyectoIV\IronLegion\IronLegion_Data\Managed\System.Core.dll (this message is harmless)
-Platform assembly: C:\Users\Alejandro\Documents\Proyecto4\ProyectoIV\IronLegion\IronLegion_Data\Managed\System.dll (this message is harmless)
-UnloadTime: 5.344817 ms
-Unloading 4 Unused Serialized files (Serialized files now loaded: 0 / Dirty serialized files: 0)
+<RI> Initialized touch support.
+Platform assembly: E:\PROYECTO4\IronLegion\IronLegion_Data\Managed\System.Core.dll (this message is harmless)
+Platform assembly: E:\PROYECTO4\IronLegion\IronLegion_Data\Managed\System.dll (this message is harmless)
+Unloading 2 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 5.730895 ms
 
-Unloading 3 unused Assets to reduce memory usage. Loaded Objects now: 330.
-Total: 1.340267 ms (FindLiveObjects: 0.025659 ms CreateObjectMapping: 0.017961 ms MarkObjects: 0.316036 ms  DeleteObjects: 0.014540 ms)
+Unloading 8 unused Assets to reduce memory usage. Loaded Objects now: 1404.
+Total: 0.918351 ms (FindLiveObjects: 0.136312 ms CreateObjectMapping: 0.039677 ms MarkObjects: 0.591008 ms  DeleteObjects: 0.149432 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 18a0 -> priority: 1 
+  Thread -> id: adc -> priority: 1 
+Unloading 3 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 3.007840 ms
+
+Unloading 108 unused Assets to reduce memory usage. Loaded Objects now: 456.
+Total: 1.854941 ms (FindLiveObjects: 0.080635 ms CreateObjectMapping: 0.037118 ms MarkObjects: 0.377899 ms  DeleteObjects: 1.357687 ms)
+
+Setting up 1 worker threads for Enlighten.
+  Thread -> id: 1b7c -> priority: 1 
+Unloading 0 Unused Serialized files (Serialized files now loaded: 0)
+UnloadTime: 0.881233 ms
+
+Unloading 25 unused Assets to reduce memory usage. Loaded Objects now: 1406.
+Total: 1.565356 ms (FindLiveObjects: 0.132152 ms CreateObjectMapping: 0.045117 ms MarkObjects: 0.636766 ms  DeleteObjects: 0.749080 ms)
+
+Setting up 2 worker threads for Enlighten.
+  Thread -> id: 19d0 -> priority: 1 
+  Thread -> id: 1ba0 -> priority: 1 
+stopping Smoke
+ 
+(Filename: C:/buildslave/unity/build/artifacts/generated/common/runtime/UnityEngineDebug.gen.cpp Line: 56)
 
