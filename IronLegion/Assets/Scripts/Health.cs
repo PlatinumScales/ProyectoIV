@@ -3,7 +3,7 @@ using System.Collections;
 
 public class Health : MonoBehaviour
 {
-
+	public Animator animator;
 		public float maxHealth = 100;
 		public float maxShield = 100;
 		public float currentHealth = 100;
@@ -11,7 +11,7 @@ public class Health : MonoBehaviour
 		public float regenDelay = 0;
 		public float maxRegenDelay = 5;
 		public float regenRate = 20;
-	GameObject vLocalPlayer;
+	//GameObject vLocalPlayer;
 
 		// Use this for initialization
 		void Start ()
@@ -47,9 +47,11 @@ public class Health : MonoBehaviour
 		regenDelay = 0;
 
 		if (currentHealth<=0) {
-            //MUERTE DEL PERSONAJE
+           /* //MUERTE DEL PERSONAJE
 			vLocalPlayer = GameObject.FindGameObjectWithTag ("Player");
 			Animator animator = vLocalPlayer.GetComponent<Animator> ();	
+
+			*/
 			animator.SetBool ("Death2", true);
 			
 			 
