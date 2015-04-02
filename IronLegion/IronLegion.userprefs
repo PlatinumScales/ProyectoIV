@@ -1,10 +1,9 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\MissionW.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SimplePause.js">
     <Files>
-      <File FileName="Assets\Scripts\MissionW.cs" Line="8" Column="31" />
-      <File FileName="Assets\Scripts\EnemyHealth.cs" Line="27" Column="33" />
-      <File FileName="Assets\Scripts\Health.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\SimplePause.js" Line="11" Column="48" />
+      <File FileName="Assets\Caracters\Mechanoid\Scripts\CustomMechControl.cs" Line="145" Column="9" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

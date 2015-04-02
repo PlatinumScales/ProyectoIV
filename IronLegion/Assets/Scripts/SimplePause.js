@@ -3,12 +3,12 @@
 
 private var pauseGame : boolean = false;
 private var showGUI : boolean = false;
-public var myGameObject : GameObject;
+public var pausedGui : GameObject;
 
 
 function Update()
 {
-	if(Input.GetKeyDown("p"))
+	if(Input.GetKeyDown("p")|| Input.GetButtonDown ("Cancel"))
 	{
 		pauseGame = !pauseGame;
 		
@@ -45,7 +45,7 @@ function Update()
     	//gameObject.GetComponent("PausedGUI").active = true;
     	//  GameObject.Find("PausedGUI").GetComponent(Canvas).enabled = true;  
     	
-    	myGameObject.SetActive(true);
+    	pausedGui.SetActive(true);
     }
     
     else
@@ -54,6 +54,6 @@ function Update()
     	//GetComponent("PausedGUI").gameObject.SetActive(false);
     	//GameObject.Find("PausedGUI").GetComponent(Canvas).enabled = false;  
     	
-    	myGameObject.SetActive(false);
+    	pausedGui.SetActive(false);
     }
 }
