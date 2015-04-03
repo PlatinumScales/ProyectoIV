@@ -21,6 +21,7 @@ public class CustomMechControl : MonoBehaviour {
 	private bool startLights = false;				//reference for starting up lights
 	private bool inAir = false;
 	private float dustTime = 0.0f;
+	private float muzzleTimer = 0.11f;
 	
 	
 	static int runState = Animator.StringToHash("Base Layer.Run");
@@ -44,6 +45,10 @@ public class CustomMechControl : MonoBehaviour {
 	// reference particle system game objects & lights here
 	public Camera playCam;
 	public Transform gun;
+
+	public ParticleEmitter muzzleFlash;
+	public GameObject muzzleLightA;
+	public GameObject muzzleLightB;
 
 	public Transform dustStart;
 	public Transform mechChest;
@@ -81,6 +86,9 @@ public class CustomMechControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		muzzleFlash.emit = false;
+		muzzleLightA.SetActive (false);
+		muzzleLightB.SetActive (false);
 
 		anim = GetComponent<Animator>();					  				
 		if(anim.layerCount ==2)
@@ -155,12 +163,16 @@ public class CustomMechControl : MonoBehaviour {
 		if(anim.layerCount ==2)		
 			layer2CurrentState = anim.GetCurrentAnimatorStateInfo(1);	// set our layer2CurrentState variable to the current state of the second Layer (1) of animation
 		
-		
-		//STARTUP
-		
+		if (muzzleTimer > 0.1f) {
+						muzzleLightA.SetActive (false);		
+						muzzleLightB.SetActive (false);
+		} else {
+			muzzleTimer += Time.deltaTime;	
 
-	
-		
+		}
+
+		//STARTUP
+
 		if(startLights == true)
 		{
 			mainEngineLight.GetComponent<Light>().intensity = Mathf.Lerp(mainEngineLight.GetComponent<Light>().intensity, 3 ,3 * Time.deltaTime);
@@ -287,19 +299,31 @@ public class CustomMechControl : MonoBehaviour {
 
 			if(Input.GetButtonUp("Fire1"))
 			{
-
 				Ray crosshair = playCam.ScreenPointToRay(new Vector3(Screen.width*0.5f, Screen.height*0.5f, 0f));
 				RaycastHit impactPoint;
-				if(Physics.Raycast(crosshair.origin ,crosshair.direction, out impactPoint ,shootDistance)){
+				// Bit shift the index of the layer (8) to get a bit mask
+				int layerMask = 1 << 8;
+				
+				// This would cast rays only against colliders in layer 8, so we just inverse the mask.
+				layerMask = ~layerMask;
+				
+				if (Physics.Raycast(crosshair.origin ,crosshair.direction, out impactPoint ,shootDistance, layerMask)) {
 					gun.LookAt(impactPoint.transform.position);
-
-					Vector3 gunPosition = gun.transform.position;
 					
-					if(Physics.Raycast(gunPosition, gun.TransformDirection(Vector3.forward),out  impactPoint, shootDistance)){
+					Vector3 gunPosition = gun.transform.position;
+
+					if(Physics.Raycast(gunPosition, gun.TransformDirection(Vector3.forward),out  impactPoint, shootDistance,  layerMask)){
 						impactPoint.transform.SendMessage("ApplyDamage", shootDamage, SendMessageOptions.DontRequireReceiver);
 					}
 				}
+
 				anim.SetBool("Shoot", true);
+				muzzleFlash.Emit();
+				muzzleTimer = 0f;
+				muzzleLightA.SetActive(true);
+				muzzleLightB.SetActive(true);
+				muzzleLightA.GetComponent<Light>().intensity = Random.Range(1f,3f);
+				muzzleLightB.GetComponent<Light>().intensity = Random.Range(1f,3f);
 			}
 		}
 		// if we enter the shooting state, reset the bool to let us shoot again in future

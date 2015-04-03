@@ -12,7 +12,9 @@ function Update()
 	{
 		pauseGame = !pauseGame;
 		
-    	if(pauseGame == true)
+    }
+    
+    if(pauseGame == true)
     	{
     		Time.timeScale = 0;
     		pauseGame = true;
@@ -22,12 +24,8 @@ function Update()
     		
     		showGUI = true;
     		
-    		
-    	}
-    }
-    
-    if(pauseGame == false)
-    {
+    	} else{
+    	
     	Time.timeScale = 1;
     	pauseGame = false;
     	//GameObject.Find("Main Camera").GetComponent(MouseLook).enabled = true;
@@ -57,3 +55,11 @@ function Update()
     	pausedGui.SetActive(false);
     }
 }
+
+function continueGame(){
+	pauseGame = false;
+
+}
+
+
+

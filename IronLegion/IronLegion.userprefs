@@ -2,8 +2,8 @@
   <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
   <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\SimplePause.js">
     <Files>
-      <File FileName="Assets\Scripts\SimplePause.js" Line="11" Column="48" />
-      <File FileName="Assets\Caracters\Mechanoid\Scripts\CustomMechControl.cs" Line="145" Column="9" />
+      <File FileName="Assets\Caracters\Mechanoid\Scripts\CustomMechControl.cs" Line="326" Column="72" />
+      <File FileName="Assets\Scripts\SimplePause.js" Line="60" Column="20" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
