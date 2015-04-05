@@ -96,11 +96,14 @@
      <Compile Include="Assets\Scripts\DelayScript.cs" />
      <Compile Include="Assets\Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\FootSteps.cs" />
+     <Compile Include="Assets\Scripts\GameControl.cs" />
      <Compile Include="Assets\Scripts\GuiManager.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
      <Compile Include="Assets\Scripts\MissionW.cs" />
      <Compile Include="Assets\Scripts\PlanetaryRotation.cs" />
+     <Compile Include="Assets\Scripts\PlayerData.cs" />
      <Compile Include="Assets\Scripts\RoboShot.cs" />
+     <Compile Include="Assets\Scripts\StartNewGame.cs" />
      <None Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />
      <None Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\NoiseEffectShaderRGB.shader" />
      <None Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_DepthOfField\SeparableWeightedBlurDof34.shader" />
