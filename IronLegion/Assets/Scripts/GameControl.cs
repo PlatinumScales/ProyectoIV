@@ -8,6 +8,7 @@ public class GameControl : MonoBehaviour {
 
 	public static GameControl control;
 	public PlayerData playerData;
+	public GameObject mechanoidSkin;
 
 	// Use this for initialization
 	void Awake () {

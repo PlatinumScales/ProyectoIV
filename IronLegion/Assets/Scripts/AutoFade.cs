@@ -82,6 +82,7 @@ public class AutoFade : MonoBehaviour
 		Instance.m_LevelName = aLevelName;
 		Instance.StartFade(aFadeOutTime, aFadeInTime, aColor);
 	}
+
 	public static void LoadLevel(int aLevelIndex,float aFadeOutTime, float aFadeInTime, Color aColor)
 	{
 		if (Fading) return;

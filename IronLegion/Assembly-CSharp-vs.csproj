@@ -93,12 +93,14 @@
      <Compile Include="Assets\Return.cs" />
      <Compile Include="Assets\ReturnLink.cs" />
      <Compile Include="Assets\Scripts\AutoFade.cs" />
+     <Compile Include="Assets\Scripts\CharacterLoader.cs" />
      <Compile Include="Assets\Scripts\DelayScript.cs" />
      <Compile Include="Assets\Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\FootSteps.cs" />
      <Compile Include="Assets\Scripts\GameControl.cs" />
      <Compile Include="Assets\Scripts\GuiManager.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
+     <Compile Include="Assets\Scripts\MissionLoader.cs" />
      <Compile Include="Assets\Scripts\MissionW.cs" />
      <Compile Include="Assets\Scripts\PlanetaryRotation.cs" />
      <Compile Include="Assets\Scripts\PlayerData.cs" />

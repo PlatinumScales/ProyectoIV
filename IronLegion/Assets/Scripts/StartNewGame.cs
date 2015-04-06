@@ -12,12 +12,14 @@ public class StartNewGame : MonoBehaviour
 				errorText.enabled = false;
 		}
 
-		public void StartGame ()
+		public void StartGame (GameObject mechaSkin)
 		{
 				if (nameField.text.Equals ("")) {
 						errorText.enabled = true;
 				} else {
 						GameControl.control.playerData.playerName = nameField.text;
+						GameControl.control.mechanoidSkin = Instantiate(mechaSkin, transform.position, transform.rotation) as GameObject;
+						GameControl.control.mechanoidSkin.transform.parent = GameControl.control.transform;
 						GameControl.control.Save ();
 						AutoFade.LoadLevel ("menuMission", 1, 2, Color.gray);
 				}

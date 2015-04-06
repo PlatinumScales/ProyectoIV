@@ -6,6 +6,6 @@ using System.IO;
 
 [Serializable]
 public class PlayerData {
-
 	public string playerName;
+	public int skinID;
 }
