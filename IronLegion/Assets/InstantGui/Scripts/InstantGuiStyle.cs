@@ -198,8 +198,7 @@ public class InstantGuiStyle
 					}
 				}
 			}
-
-			/*
+			
 			//setting text params
 			for (int i=0;i<element.guiTexts.Length;i++) 
 			{
@@ -242,7 +241,7 @@ public class InstantGuiStyle
 				
 				element.guiTexts[i].pixelOffset = InstantGui.Invert(pixelOffset);		
 			}
-			*/
+			
 			
 			//aligning text effect
 			if (textEffect==InstantGuiTextEffect.shadow)
