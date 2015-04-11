@@ -5,12 +5,12 @@ using System.Collections;
 [RequireComponent(typeof (Rigidbody))]
 public class CustomMechControl : MonoBehaviour {
 
-	public float animSpeed = 1.5f;				// a public setting for overall animator animation speed
-	public float lookSmoother = 3f;				// a smoothing setting for camera motion
+	public float animSpeed = 3f;				// a public setting for overall animator animation speed
+	public float lookSmoother = 6f;				// a smoothing setting for camera motion
 	public bool useCurves;						// a setting for teaching purposes to show use of curves
-	public float lightsmooth = 3f;              //light lerp smoothness
+	public float lightsmooth = 4f;              //light lerp smoothness
 	public bool aim;
-	public float shootDistance = 50f;
+	public float shootDistance = 3000f;
 	public float shootDamage = 50f;
 
 	
@@ -299,7 +299,7 @@ public class CustomMechControl : MonoBehaviour {
 
 			if(Input.GetButtonUp("Fire1"))
 			{
-				Ray crosshair = playCam.ScreenPointToRay(new Vector3(Screen.width*0.5f, Screen.height*0.5f, 0f));
+				Ray crosshair = playCam.ScreenPointToRay(new Vector3(Screen.width*0.5f, Screen.height*0.5f,0f));
 				RaycastHit impactPoint;
 				// Bit shift the index of the layer (8) to get a bit mask
 				int layerMask = 1 << 8;
@@ -308,12 +308,15 @@ public class CustomMechControl : MonoBehaviour {
 				layerMask = ~layerMask;
 				
 				if (Physics.Raycast(crosshair.origin ,crosshair.direction, out impactPoint ,shootDistance, layerMask)) {
+					 
 					gun.LookAt(impactPoint.transform.position);
 					
 					Vector3 gunPosition = gun.transform.position;
-
-					if(Physics.Raycast(gunPosition, gun.TransformDirection(Vector3.forward),out  impactPoint, shootDistance,  layerMask)){
-						impactPoint.transform.SendMessage("ApplyDamage", shootDamage, SendMessageOptions.DontRequireReceiver);
+					if(impactPoint.collider.gameObject.tag == "Enemy"){
+						Debug.Log("ENEMIGO!!!");
+						//if(Physics.Raycast(gunPosition, gun.TransformDirection(Vector3.forward),out  impactPoint, shootDistance,  layerMask)){
+							impactPoint.transform.SendMessage("RestEnemyLife", shootDamage, SendMessageOptions.DontRequireReceiver);
+						//}
 					}
 				}
 

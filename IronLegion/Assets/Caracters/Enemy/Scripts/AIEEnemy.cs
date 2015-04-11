@@ -15,10 +15,10 @@ public class AIEEnemy : MonoBehaviour {
 	private float wanderSpeed = 3f; //Give it the movement speeds
 	private bool vFriendInDanger = false;
 
-	private  int vEnemyLife=30;
+	public  float vEnemyLife;
 	 
 
-	public void RestLife(string pEvemyID,int pDamage){
+	/*public void RestLife(string pEvemyID,int pDamage){
 	 
 
 		vEnemyLife = vEnemyLife - pDamage;
@@ -39,7 +39,7 @@ public class AIEEnemy : MonoBehaviour {
 		 
 	}
 	
-
+*/
 	
 	// Use this for initialization
 	void Awake(){
@@ -58,6 +58,7 @@ public class AIEEnemy : MonoBehaviour {
 	
 
 	void PatrolTerrain (){
+		vEnemyLife = (float)GameObject.Find(gameObject.name).GetComponent<EnemyHealth>().currentHealth;
 		if (vEnemyLife != 0) {
 						//Debug.Log ("Patrol Vida:" + vEnemyLife);
 			if(vTarget!=null){
@@ -81,6 +82,7 @@ public class AIEEnemy : MonoBehaviour {
 	}
 	//Creating this as it's own method so we can send it directions other when it's just wandering.
 	public void NewDestination(Vector3 targetPoint){
+		vEnemyLife = GameObject.Find (gameObject.name).GetComponent<EnemyHealth>().currentHealth;
 		if (vEnemyLife != 0) {
 						//Sets the agents new target destination to the position passed in
 						vNav.SetDestination (targetPoint);
@@ -91,7 +93,7 @@ public class AIEEnemy : MonoBehaviour {
 
 	
 	void Start () {
-		 
+		vEnemyLife = (float)GameObject.Find (gameObject.name).GetComponent<EnemyHealth>().currentHealth;
 		          if (vEnemyLife != 0) {
 			 
 			                PatrolTerrain ();
@@ -103,7 +105,7 @@ public class AIEEnemy : MonoBehaviour {
 
 		Debug.Log ("OnTriggerExit");
 		IsAttack = false;
-		//Debug.Log("Patroling..." + vEnemyLife);
+		vEnemyLife = GameObject.Find (gameObject.name).GetComponent<EnemyHealth>().currentHealth;
 		if (vEnemyLife != 0) {
 		Debug.Log(gameObject.name);
 		
@@ -119,7 +121,10 @@ public class AIEEnemy : MonoBehaviour {
 
 
 	void OnTriggerEnter(Collider other){
+		vEnemyLife = GameObject.Find (gameObject.name).GetComponent<EnemyHealth>().currentHealth;
 		if(other.gameObject.tag == "Player"){
+
+			if(vEnemyLife!=0){
 			IsAttack=true;
 		    Attack ();
 
@@ -131,7 +136,7 @@ public class AIEEnemy : MonoBehaviour {
 				i++;
 			}
 
-				
+			}	
 		}
 		 
 			
@@ -140,14 +145,17 @@ public class AIEEnemy : MonoBehaviour {
 	}
 
 	private void ApplyDamage(){
+		vEnemyLife = GameObject.Find (gameObject.name).GetComponent<EnemyHealth>().currentHealth;
 
-		vLocalPlayer.GetComponent<Health>().ApplyDamage(2);
+		if(vEnemyLife!=0){
+			Debug.Log("ataca al juegador");
+			vLocalPlayer.GetComponent<Health>().RestLifePlayer(1);
 
 		//TODO PENDIENTE
-		//Animator animator = vLocalPlayer.GetComponent<Animator> ();
+		Animator animator = vLocalPlayer.GetComponent<Animator> ();
 
-		//animator.SetBool ("HitF", true);
-		 
+		animator.SetBool ("HitF", true);
+		}
 			 
     }
 
@@ -157,7 +165,7 @@ public class AIEEnemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		 
+		vEnemyLife = GameObject.Find (gameObject.name).GetComponent<EnemyHealth>().currentHealth;
 		if (vEnemyLife!=0) {
 			if(vTarget!=null){
 						var dist = Vector3.Distance (vTarget.position, transform.position);
@@ -193,13 +201,13 @@ public class AIEEnemy : MonoBehaviour {
 	 
 
 	void Attack(){
-		//Debug.Log ("OnTriggerEnter");
+		vEnemyLife = GameObject.Find (gameObject.name).GetComponent<EnemyHealth>().currentHealth;
 		if (vEnemyLife != 0) {
 
 
 			//if (gameObject.name.Contains ("EnemySpider")) {
 			//Debug.Log("ataca");
-			vNav.Stop (true);
+			//vNav.Stop (true);
 			
 			Animator animator = GameObject.Find (gameObject.name).GetComponent<Animator> ();
 			animator.SetBool ("Bite", true); 

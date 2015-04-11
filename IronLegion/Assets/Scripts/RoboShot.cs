@@ -5,6 +5,7 @@ public class RoboShot : MonoBehaviour {
 
 	public AudioClip shootSound;
 
+	public bool CanShot=false;
 	private AudioSource source;
 	private float volLowRange = .5f;
 	private float volHighRange = 1.5f;
@@ -19,9 +20,10 @@ public class RoboShot : MonoBehaviour {
 	void Update () {
 		if (Input.GetButtonDown ("Fire1")) 
 		{
-			float vol = Random.Range (volLowRange, volHighRange);
-			source.PlayOneShot(shootSound, vol);
-
+			if(GetComponent<Health>().currentHealth>0 && CanShot){
+				float vol = Random.Range (volLowRange, volHighRange);
+				source.PlayOneShot(shootSound, vol);
+			}
 			
 		}
 	}

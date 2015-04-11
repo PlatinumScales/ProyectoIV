@@ -8,8 +8,8 @@ public class FootSteps : MonoBehaviour {
 	public AudioClip jumpSound;
 
 	private AudioSource source;
-	private float volLowRange = .5f;
-	private float volHighRange = 1.5f;
+	private float volLowRange = .3f;
+	private float volHighRange = 4f;
 	
 	// Use this for initialization
 	void Awake	 () {
@@ -19,18 +19,21 @@ public class FootSteps : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetButtonDown ("Walk")) 
+		bool vSound = true;
+		if (Input.GetButtonDown("Vertical")) 
 		{
-			source.loop = true;
+			 
 			float vol = Random.Range (volLowRange, volHighRange);
-			source.PlayOneShot(stepSound, vol);
-
-			
+    		source.PlayOneShot(stepSound, vol);
+				 
+			 
 		}
-		if (Input.GetButtonDown("Jump"))
+
+		
+		/*if (Input.GetButtonDown("Jump"))
 		{
 			float vol = Random.Range (volLowRange, volHighRange);
 			source.PlayOneShot(jumpSound, vol);
-		}
+		}*/
 	}
 }

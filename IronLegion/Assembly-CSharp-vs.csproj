@@ -56,6 +56,7 @@
      <Compile Include="Assets\Caracters\Player\Scripts\HealthPlayerScript.cs" />
      <Compile Include="Assets\ChangeImag.cs" />
      <Compile Include="Assets\ChargeMission.cs" />
+     <Compile Include="Assets\EndShotSound.cs" />
      <Compile Include="Assets\GoMissionScene.cs" />
      <Compile Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\BlurEffect.cs" />
      <Compile Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\ColorCorrectionEffect.cs" />
@@ -71,6 +72,7 @@
      <Compile Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\SepiaToneEffect.cs" />
      <Compile Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\TwirlEffect.cs" />
      <Compile Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\VortexEffect.cs" />
+     <Compile Include="Assets\InitSounds.cs" />
      <Compile Include="Assets\InstantGui\Scripts\Elements\InstantGuiButton.cs" />
      <Compile Include="Assets\InstantGui\Scripts\Elements\InstantGuiElementsList.cs" />
      <Compile Include="Assets\InstantGui\Scripts\Elements\InstantGuiGauge.cs" />
