@@ -8,4 +8,5 @@ using System.IO;
 public class PlayerData {
 	public string playerName;
 	public int skinID;
+	public int mission;
 }
