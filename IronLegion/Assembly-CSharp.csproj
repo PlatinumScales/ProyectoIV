@@ -90,7 +90,6 @@
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiStyle.cs" />
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiStyleSet.cs" />
      <Compile Include="Assets\ItemHealthScript.cs" />
-     <Compile Include="Assets\NewGame.cs" />
      <Compile Include="Assets\QuitLink.cs" />
      <Compile Include="Assets\Return.cs" />
      <Compile Include="Assets\ReturnLink.cs" />
@@ -108,6 +107,7 @@
      <Compile Include="Assets\Scripts\VisualsScripts\DelayScript.cs" />
      <Compile Include="Assets\Scripts\VisualsScripts\GuiManager.cs" />
      <Compile Include="Assets\Scripts\VisualsScripts\LoadGameScreen.cs" />
+     <Compile Include="Assets\Scripts\VisualsScripts\MenuUIBehaviour.cs" />
      <Compile Include="Assets\Scripts\VisualsScripts\MissionLoader.cs" />
      <Compile Include="Assets\Scripts\VisualsScripts\PlanetaryRotation.cs" />
      <None Include="Assets\Imported Scene Assets\Container Barrel\Standard Assets\Image Effects (Pro Only)\_Sources\Shaders\_BloomAndFlares\BlendOneOne.shader" />

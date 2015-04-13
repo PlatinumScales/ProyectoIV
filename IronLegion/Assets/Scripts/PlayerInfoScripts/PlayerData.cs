@@ -9,4 +9,5 @@ public class PlayerData {
 	public string playerName;
 	public int skinID;
 	public int mission;
+	public string date;
 }

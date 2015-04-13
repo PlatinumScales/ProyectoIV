@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.Serialization.Formatters.Binary;
@@ -9,6 +9,9 @@ public class LoadGameScreen : MonoBehaviour {
 	public List<PlayerData> pdl = new List<PlayerData>();
 	public RectTransform loadPanel;
 	public List<string> missions;
+	public List<GameObject> mechanoidSkins;
+
+	// Change panel name to i then onclic(Gamecontroler.Playerdata = pdl[i])
 
 	// Use this for initialization
 	void Start () {
@@ -17,13 +20,12 @@ public class LoadGameScreen : MonoBehaviour {
 		});
 		float x = 0f;
 		float y = 0f;
-		missions = new List<string>{"ENCAMPMENT", "WASTELAND", "RAGNAROK"};	
 
 		bool flag = true;
 		int index = 0;
 		foreach(PlayerData pd in pdl){
 			RectTransform g =  Instantiate (loadPanel) as RectTransform; 
-			g.name = " loadPanel" + index;
+			g.name = ""+ index;
 			g.SetParent(transform,false);
 			g.localScale = new Vector3(1f,1f);
 			if(flag){
@@ -43,7 +45,7 @@ public class LoadGameScreen : MonoBehaviour {
 					t.GetComponent<Text>().text = pd.playerName;
 					break;
 				case "LastSave":
-					t.GetComponent<Text>().text = "";
+					t.GetComponent<Text>().text = pd.date;
 					break;
 				case "Mission":
 					Debug.Log(pd.mission);
@@ -53,9 +55,18 @@ public class LoadGameScreen : MonoBehaviour {
 					break;
 				}
 			}
+			Button b = g.GetComponentInChildren<Button>();
+			b.onClick.AddListener(()=> LoadPlayer(pd));
 
+			index++;
 		}
+	}
 
+	void LoadPlayer (PlayerData pd){
+		GameControl.control.playerData = pd;
+		GameControl.control.mechanoidSkin = Instantiate (mechanoidSkins[pd.skinID], transform.position, transform.rotation) as GameObject;
+		GameControl.control.mechanoidSkin.transform.SetParent(GameControl.control.transform);
+		AutoFade.LoadLevel ("menuMission", 1, 2, Color.gray);
 	}
 
 	// Update is called once per frame

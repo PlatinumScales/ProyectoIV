@@ -29,7 +29,7 @@ public class StartNewGame : MonoBehaviour
 			GameControl.control.playerData.mission = 0;
 			GameControl.control.mechanoidSkin = Instantiate(mechaSkin, transform.position, transform.rotation) as GameObject;
 			GameControl.control.mechanoidSkin.transform.parent = GameControl.control.transform;
-
+			GameControl.control.playerData.date = System.DateTime.Now.ToString(); 
 			PlayerDataManager.pdm.playerNames.Add(nameField.text);
 			PlayerDataManager.pdm.Save();
 			GameControl.control.Save ();
