@@ -18,9 +18,12 @@ public class LoadGameScreen : MonoBehaviour {
 		PlayerDataManager.pdm.playerNames.ForEach(delegate(string name){
 			pdl.Add(PlayerDataManager.pdm.Load(name));
 		});
+
+		Vector2 wh = gameObject.GetComponent<RectTransform>().sizeDelta;
+		gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(wh.x, ((pdl.Count/4))*140f);
+
 		float x = 0f;
 		float y = 0f;
-
 		bool flag = true;
 		int index = 0;
 		foreach(PlayerData pd in pdl){
@@ -29,14 +32,13 @@ public class LoadGameScreen : MonoBehaviour {
 			g.SetParent(transform,false);
 			g.localScale = new Vector3(1f,1f);
 			if(flag){
-				y-= 130f;
+				y-= 140f;
 				x = 0f;
 			}else{
-				x = 650f;
+				x = 550f;
 			}
 			flag = !flag;
 			g.localPosition = new Vector2(x,y);
-			
 			Transform[] children = g.GetComponentsInChildren<Transform>();
 			foreach(Transform t in children){
 				switch (t.name)

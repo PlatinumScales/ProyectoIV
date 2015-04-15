@@ -4,22 +4,20 @@ using System;
 using System.Collections;
 
 public class MissionLoader : MonoBehaviour {
-	public int mission = 1;
+	public string mission ;
 	public RawImage  missionPreview;
 
-	public void MissionPreview( String textureName){
-		missionPreview.texture = (Texture)  Resources.Load(textureName, typeof(Texture));
+
+	public void setMission(string missionName){
+		mission = missionName;
 	}
-
-	public void MissionSet(int missionNumber){
-		mission = missionNumber;
-
+	
+	public void MissionPreview( Texture texture){
+		missionPreview.texture = texture;
 	}
 
 	public void LoadMission(){
-		AutoFade.LoadLevel (mission + 3, 1, 2, Color.black);
+		AutoFade.LoadLevel (mission , 1, 2, Color.black);
 
 	}
-
-
 }
