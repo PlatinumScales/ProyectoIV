@@ -8,10 +8,14 @@ public var pausedGui : GameObject;
 
 function Update()
 {
-	if(Input.GetKeyDown("p")|| Input.GetButtonDown ("Cancel"))
+	if(Input.GetKeyDown("p"))
 	{
 		pauseGame = !pauseGame;
 		
+    }
+    if(Input.GetButtonDown ("Cancel"))
+	{
+		Application.LoadLevel(1);
     }
     
     if(pauseGame == true)
