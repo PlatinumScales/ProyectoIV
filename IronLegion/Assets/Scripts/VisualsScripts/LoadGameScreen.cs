@@ -59,7 +59,6 @@ public class LoadGameScreen : MonoBehaviour {
 			}
 			Button b = g.GetComponentInChildren<Button>();
 			b.onClick.AddListener(()=> LoadPlayer(pd));
-
 			index++;
 		}
 	}
