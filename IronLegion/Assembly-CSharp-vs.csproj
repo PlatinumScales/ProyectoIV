@@ -93,6 +93,7 @@
      <Compile Include="Assets\QuitLink.cs" />
      <Compile Include="Assets\Return.cs" />
      <Compile Include="Assets\ReturnLink.cs" />
+     <Compile Include="Assets\Scripts\Credits.cs" />
      <Compile Include="Assets\Scripts\EnemyHealth.cs" />
      <Compile Include="Assets\Scripts\FootSteps.cs" />
      <Compile Include="Assets\Scripts\Health.cs" />
