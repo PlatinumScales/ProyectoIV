@@ -149,7 +149,7 @@ public class AIEEnemy : MonoBehaviour {
 
 		if(vEnemyLife!=0){
 			Debug.Log("ataca al juegador");
-			vLocalPlayer.GetComponent<Health>().RestLifePlayer(1);
+			vLocalPlayer.GetComponent<Health>().RestLifePlayer(30);
 
 		//TODO PENDIENTE
 		Animator animator = vLocalPlayer.GetComponent<Animator> ();

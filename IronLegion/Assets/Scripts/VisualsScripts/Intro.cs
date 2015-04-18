@@ -22,6 +22,9 @@ public class Intro : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (Input.anyKey){
+			AutoFade.LoadLevel ( "menuUI" ,1,2,Color.black);
+		}
 		if (clock < 60f){
 			pos.x -= Time.deltaTime*speed;
 			slidePanel1.localPosition = pos;

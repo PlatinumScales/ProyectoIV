@@ -29,6 +29,7 @@ public class MissionW : MonoBehaviour {
 			if(objCheck){
 				guiAnimator.SetTrigger("FadeIn");
 				Debug.Log("Mission completed");
+				AutoFade.LoadLevel ("menuMission" , 4, 2, Color.black);
 			}
 			checkDelay -= check;
 		}

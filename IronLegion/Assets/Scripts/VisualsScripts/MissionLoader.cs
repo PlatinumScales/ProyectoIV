@@ -20,4 +20,8 @@ public class MissionLoader : MonoBehaviour {
 		AutoFade.LoadLevel (mission , 1, 2, Color.black);
 
 	}
+
+	public void back(){
+		AutoFade.LoadLevel ("menuUI" , 1, 2, Color.black);
+	}
 }

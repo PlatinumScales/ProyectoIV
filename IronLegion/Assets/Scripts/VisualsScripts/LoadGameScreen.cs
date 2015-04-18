@@ -6,7 +6,7 @@ using System.IO;
 using UnityEngine.UI;
 
 public class LoadGameScreen : MonoBehaviour {
-	public List<PlayerData> pdl = new List<PlayerData>();
+	//public List<PlayerData> pdl = new List<PlayerData>();
 	public RectTransform loadPanel;
 	public List<string> missions;
 	public List<GameObject> mechanoidSkins;
@@ -15,18 +15,16 @@ public class LoadGameScreen : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		PlayerDataManager.pdm.playerNames.ForEach(delegate(string name){
-			pdl.Add(PlayerDataManager.pdm.Load(name));
-		});
-
 		Vector2 wh = gameObject.GetComponent<RectTransform>().sizeDelta;
-		gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(wh.x, ((pdl.Count/4))*140f);
-
+		gameObject.GetComponent<RectTransform>().sizeDelta = new Vector2(wh.x, ((PlayerDataManager.pdm.playerNames.Count/4))*140f);
+		
 		float x = 0f;
 		float y = 0f;
 		bool flag = true;
 		int index = 0;
-		foreach(PlayerData pd in pdl){
+
+		foreach(string name in PlayerDataManager.pdm.playerNames){
+			PlayerData pd = PlayerDataManager.pdm.Load(name);
 			RectTransform g =  Instantiate (loadPanel) as RectTransform; 
 			g.name = ""+ index;
 			g.SetParent(transform,false);
@@ -57,18 +55,12 @@ public class LoadGameScreen : MonoBehaviour {
 					break;
 				}
 			}
-			Button b = g.GetComponentInChildren<Button>();
-			b.onClick.AddListener(()=> LoadPlayer(pd));
+			g.GetComponent<PlayerDataPanel>().setComponents(pd,mechanoidSkins[pd.skinID]);
 			index++;
 		}
 	}
 
-	void LoadPlayer (PlayerData pd){
-		GameControl.control.playerData = pd;
-		GameControl.control.mechanoidSkin = Instantiate (mechanoidSkins[pd.skinID], transform.position, transform.rotation) as GameObject;
-		GameControl.control.mechanoidSkin.transform.SetParent(GameControl.control.transform);
-		AutoFade.LoadLevel ("menuMission", 1, 2, Color.gray);
-	}
+
 
 	// Update is called once per frame
 	void Update () {

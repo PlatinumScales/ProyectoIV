@@ -7,6 +7,9 @@ public class MenuUIBehaviour : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+		Cursor.visible = true;
+		Screen.lockCursor = false;
+
 		if(PlayerDataManager.pdm == null | PlayerDataManager.pdm.playerNames.Count <= 0){
 			continueBtn.enabled = false;
 		}
