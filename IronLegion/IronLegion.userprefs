@@ -1,9 +1,16 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\ReturnLink.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Caracters\Enemy\Scripts\AIEEnemy.cs">
     <Files>
-      <File FileName="Assets\ReturnLink.cs" Line="16" Column="3" />
+      <File FileName="Assets\Scripts\MissionW.cs" Line="30" Column="1" />
+      <File FileName="Assets\QuitToMenue.cs" Line="1" Column="1" />
+      <File FileName="Assets\ReturnLink.cs" Line="1" Column="1" />
       <File FileName="Assets\Scripts\VisualsScripts\SimplePause.js" Line="1" Column="1" />
+      <File FileName="Assets\KY_effects\Script\ConGUI.js" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\VisualsScripts\AutoFade.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\VisualsScripts\GuiManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\VisualsScripts\MissionLoader.cs" Line="1" Column="1" />
+      <File FileName="Assets\Caracters\Enemy\Scripts\AIEEnemy.cs" Line="7" Column="3" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
