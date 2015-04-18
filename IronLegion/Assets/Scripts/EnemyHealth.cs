@@ -6,7 +6,7 @@ public class EnemyHealth : MonoBehaviour {
 	public Animator animator;
 	public float maxHealth = 100;
 	public float maxShield = 100;
-	public float currentHealth = 100;
+	public float currentHealth = 300;
 	//public float currentShield = 100;
 	public float regenDelay = 0;
 	public float maxRegenDelay = 5;

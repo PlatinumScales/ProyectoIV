@@ -11,7 +11,7 @@ public class CustomMechControl : MonoBehaviour {
 	public float lightsmooth = 4f;              //light lerp smoothness
 	public bool aim;
 	public float shootDistance = 3000f;
-	public float shootDamage = 50f;
+	public float shootDamage = 25f;
 
 	
 	private Animator anim;							// a reference to the animator on the character

@@ -67,7 +67,7 @@ public class AIEEnemy : MonoBehaviour {
 						vNav.speed = wanderSpeed;
 						startPosition = this.transform.position;
 						//Start Wandering
-						InvokeRepeating ("Wander", 3f, 20f);
+						InvokeRepeating ("Wander", 5f, 57f);
 				}
 	}
 
@@ -169,7 +169,7 @@ public class AIEEnemy : MonoBehaviour {
 		if (vEnemyLife!=0) {
 			if(vTarget!=null){
 						var dist = Vector3.Distance (vTarget.position, transform.position);
-						if (dist < 25f ) {
+						if (dist < 99f ) {
 				               
 								LookAtPlayer ();
 								
