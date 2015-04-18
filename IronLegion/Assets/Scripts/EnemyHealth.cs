@@ -73,7 +73,7 @@ public class EnemyHealth : MonoBehaviour {
 				Debug.Log("ERROR");
 				Debug.Log(ex.Message);
 			}
-			Invoke ("DeleteEnemy",6f);
+			Invoke ("DeleteEnemy",4f);
 			 
 			
 		}

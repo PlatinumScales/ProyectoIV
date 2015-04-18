@@ -46,6 +46,7 @@
 	</Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AudioVideoScript.cs" />
      <Compile Include="Assets\Caracters\Enemy\Scripts\AIEEnemy.cs" />
      <Compile Include="Assets\Caracters\Mechanoid\Scripts\CustomMechControl.cs" />
      <Compile Include="Assets\Caracters\Mechanoid\Scripts\MechControlScript.cs" />
@@ -90,6 +91,7 @@
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiStyle.cs" />
      <Compile Include="Assets\InstantGui\Scripts\InstantGuiStyleSet.cs" />
      <Compile Include="Assets\ItemHealthScript.cs" />
+     <Compile Include="Assets\OptionsLinks.cs" />
      <Compile Include="Assets\QuitLink.cs" />
      <Compile Include="Assets\QuitToMenue.cs" />
      <Compile Include="Assets\Return.cs" />
