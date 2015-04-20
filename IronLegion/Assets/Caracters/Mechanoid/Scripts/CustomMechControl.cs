@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using UnityEngine.UI;
 
 [RequireComponent(typeof (Animator))]
 [RequireComponent(typeof (Rigidbody))]
@@ -11,7 +12,7 @@ public class CustomMechControl : MonoBehaviour {
 	public float lightsmooth = 4f;              //light lerp smoothness
 	public bool aim;
 	public float shootDistance = 3000f;
-	public float shootDamage = 25f;
+	public float shootDamage = 40f;
 
 	
 	private Animator anim;							// a reference to the animator on the character
@@ -86,6 +87,9 @@ public class CustomMechControl : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+ 
+
+
 		muzzleFlash.emit = false;
 		muzzleLightA.SetActive (false);
 		muzzleLightB.SetActive (false);

@@ -22,7 +22,7 @@ public class AIEEnemy : MonoBehaviour {
 	 
 
 		vEnemyLife = vEnemyLife - pDamage;
-		//Debug.Log("Vida2:" + vEnemyLife + " Damage" +  pDamage);
+		Debug.Log("Vida2:" + vEnemyLife + " Damage" +  pDamage);
 		if(vEnemyLife==0){
 			try{
 				 
@@ -67,7 +67,7 @@ public class AIEEnemy : MonoBehaviour {
 						vNav.speed = wanderSpeed;
 						startPosition = this.transform.position;
 						//Start Wandering
-						InvokeRepeating ("Wander", 5f, 57f);
+						InvokeRepeating ("Wander", 1f, 15f);
 				}
 	}
 

@@ -38,7 +38,7 @@ public class EnemyHealth : MonoBehaviour {
 	
 	public void RestEnemyLife (float damage)
 	{
-		Debug.Log(damage);
+
 
 			
 			Quaternion vRotation = Quaternion.LookRotation(vTarget.position - transform.position);
@@ -50,10 +50,15 @@ public class EnemyHealth : MonoBehaviour {
 
 
 		Debug.Log("Baja energia al enemigo");
+		Debug.Log("EnemyLife:" + currentHealth + "Damage" +  damage);
+		GameObject.Find("HITMESSAGE").GetComponent<HITMESSAGESCRIPT>().ShowMessage("HIT ENEMY HEALTH:" + currentHealth + "/DAMAGE:" + damage.ToString(),Color.white);
+
 		//if (currentShield > 0) {
 		//	currentShield -= damage;
 		//} else {
 			if (currentHealth > 0) {
+
+			//GetComponent<DamageMultiplierEffect>().DamageEffect();
 				currentHealth -= damage;
 			}
 			
@@ -64,16 +69,17 @@ public class EnemyHealth : MonoBehaviour {
 		if (currentHealth<=0) {
 			try{
 
-				
 				Animator animator = GameObject.Find (gameObject.name).GetComponent<Animator> ();
 				animator.SetBool ("Death", true);
-				
+
+
 				
 			}catch(UnityException ex){
 				Debug.Log("ERROR");
 				Debug.Log(ex.Message);
 			}
-			Invoke ("DeleteEnemy",4f);
+			Invoke ("DeleteEnemy",3f);
+			GameObject.Find("HITMESSAGE").GetComponent<HITMESSAGESCRIPT>().ShowMessage("KILLED",Color.red);
 			 
 			
 		}

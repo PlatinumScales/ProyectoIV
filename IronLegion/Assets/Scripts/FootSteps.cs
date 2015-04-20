@@ -24,7 +24,7 @@ public class FootSteps : MonoBehaviour {
 		{
 			 
 			float vol = Random.Range (volLowRange, volHighRange);
-    		source.PlayOneShot(stepSound, vol);
+    		//source.PlayOneShot(stepSound, vol);
 				 
 			 
 		}
