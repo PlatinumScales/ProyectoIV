@@ -8,7 +8,7 @@ public class RoboShot : MonoBehaviour {
 	public bool CanShot=false;
 	private AudioSource source;
 	private float volLowRange = .5f;
-	private float volHighRange = 1.5f;
+	private float volHighRange = 3f;
 	
 	// Use this for initialization
 	void Awake	 () {

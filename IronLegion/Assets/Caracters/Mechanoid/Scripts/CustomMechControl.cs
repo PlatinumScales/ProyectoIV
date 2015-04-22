@@ -329,8 +329,11 @@ public class CustomMechControl : MonoBehaviour {
 				muzzleTimer = 0f;
 				muzzleLightA.SetActive(true);
 				muzzleLightB.SetActive(true);
-				muzzleLightA.GetComponent<Light>().intensity = Random.Range(1f,3f);
-				muzzleLightB.GetComponent<Light>().intensity = Random.Range(1f,3f);
+				muzzleLightA.GetComponent<Light>().intensity = Random.Range(5f,10f);
+				muzzleLightB.GetComponent<Light>().intensity = Random.Range(10f,15f);
+
+				  
+
 			}
 		}
 		// if we enter the shooting state, reset the bool to let us shoot again in future
