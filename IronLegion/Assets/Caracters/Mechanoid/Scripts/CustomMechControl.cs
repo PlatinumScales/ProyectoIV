@@ -314,7 +314,7 @@ public class CustomMechControl : MonoBehaviour {
 				if (Physics.Raycast(crosshair.origin ,crosshair.direction, out impactPoint ,shootDistance, layerMask)) {
 					 
 					gun.LookAt(impactPoint.transform.position);
-					
+					Debug.LogWarning(impactPoint.collider.gameObject.tag);
 					Vector3 gunPosition = gun.transform.position;
 					if(impactPoint.collider.gameObject.tag == "Enemy"){
 						Debug.Log("ENEMIGO!!!");

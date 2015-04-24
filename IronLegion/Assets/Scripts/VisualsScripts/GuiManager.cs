@@ -13,6 +13,7 @@ public class GuiManager : MonoBehaviour
 	public Image  healthBar;
 	public Text shieldTxt;
 	public Text healthTxt;
+	private bool targettt=false;
 
 
 		void Start ()
@@ -21,6 +22,18 @@ public class GuiManager : MonoBehaviour
 
 		void Update ()
 		{
+
+
+		 
+			Debug.LogWarning("Finding");
+			//if(GameObject.FindGameObjectWithTag ("Player")!=null){
+		try	{
+		character = GameObject.FindGameObjectWithTag ("Player").GetComponent<Health>();
+			
+
+		Debug.Log (character.maxShield.ToString());
+		 
+		 
 				shieldBar.fillAmount = (character.currentShield * 1f) / (character.maxShield * 1f);
 				healthBar.fillAmount = (character.currentHealth * 1f) / (character.maxHealth * 1f);
 				if (healthBar.fillAmount > 0.6f) {
@@ -39,6 +52,11 @@ public class GuiManager : MonoBehaviour
 			Cursor.visible = true;
 			Screen.lockCursor = false;
 			AutoFade.LoadLevel("menuMission" , 8, 2, Color.black);
+		}
+			 
+			
+		}catch(Exception ex)
+		{
 		}
 	}
 

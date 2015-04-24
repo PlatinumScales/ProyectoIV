@@ -32,6 +32,9 @@ public class Health : MonoBehaviour{
 
 	public void RestLifePlayer (float damage){
 		Debug.Log ("APPLY DAMAGE PERSONAJE");
+		Debug.Log (damage.ToString());
+		//Debug.Log (currentShield.ToString());
+		//Debug.Log (currentHealth.ToString());
 		regenDelay = 0;
 		if (currentShield > 0) {
 				currentShield -= damage;

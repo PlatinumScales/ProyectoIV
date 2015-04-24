@@ -17,6 +17,7 @@ public class EnemyHealth : MonoBehaviour {
 	public Transform vTarget;
 	NavMeshAgent vNav;
 	GameObject vLocalPlayer;
+	public bool targettt=false;
 	// Use this for initialization
 	void Start ()
 	{
@@ -38,8 +39,15 @@ public class EnemyHealth : MonoBehaviour {
 	
 	public void RestEnemyLife (float damage)
 	{
-
-
+		if(targettt==false){
+			Debug.LogWarning("Finding");
+			vLocalPlayer = GameObject.FindGameObjectWithTag ("Player");
+			if (vLocalPlayer != null) {
+				Debug.LogWarning("Finding true");
+				vTarget = vLocalPlayer.transform;
+				targettt=true;
+			}
+		}
 			
 			Quaternion vRotation = Quaternion.LookRotation(vTarget.position - transform.position);
 			transform.rotation = Quaternion.Slerp(transform.rotation,vRotation,Time.deltaTime * vRotationDamping);
