@@ -17,7 +17,7 @@ public class AIEEnemy : MonoBehaviour {
 
 	public  float vEnemyLife;
 	 
-
+	private bool targettt=false;
 	/*public void RestLife(string pEvemyID,int pDamage){
 	 
 
@@ -58,6 +58,7 @@ public class AIEEnemy : MonoBehaviour {
 	
 
 	void PatrolTerrain (){
+
 		vEnemyLife = (float)GameObject.Find(gameObject.name).GetComponent<EnemyHealth>().currentHealth;
 		if (vEnemyLife != 0) {
 						//Debug.Log ("Patrol Vida:" + vEnemyLife);
@@ -165,6 +166,20 @@ public class AIEEnemy : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+	 
+		if(targettt==false){
+			Debug.LogWarning("Finding");
+		vLocalPlayer = GameObject.FindGameObjectWithTag ("Player");
+			if (vLocalPlayer != null) {
+				Debug.LogWarning("Finding true");
+				vTarget = vLocalPlayer.transform;
+				targettt=true;
+			}
+
+		}
+
+
+
 		vEnemyLife = GameObject.Find (gameObject.name).GetComponent<EnemyHealth>().currentHealth;
 		if (vEnemyLife!=0) {
 			if(vTarget!=null){

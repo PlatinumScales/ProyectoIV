@@ -5,7 +5,8 @@ public class EndShotSound : StateMachineBehaviour {
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		GameObject.FindGameObjectWithTag ("Player").GetComponent<RoboShot>().CanShot = false;
+		//GameObject.FindGameObjectWithTag ("OnlinePlayer").GetComponent<RoboShot>().CanShot = false;
+		GameObject.FindWithTag ("Player").GetComponent<RoboShot>().CanShot = false;
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

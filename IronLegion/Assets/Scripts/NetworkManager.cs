@@ -47,8 +47,8 @@ public class NetworkManager : MonoBehaviour {
 		GameObject myPlayer = (GameObject) PhotonNetwork.Instantiate ("OnlinePlayer", mySpawnSpot.transform.position, mySpawnSpot.transform.rotation, 0);
 		myPlayer.GetComponent<CustomMechControl> ().enabled = true;
 		//myPlayer.GetComponent<AudioSource> ().enabled = true;
-		myCamera.GetComponent<Camera> ().enabled = true;
-		myCamera.GetComponent<AudioSource> ().enabled = true;
-		StandByCamera.enabled = false;
+//		myCamera.GetComponent<Camera> ().enabled = true;
+//		myCamera.GetComponent<AudioSource> ().enabled = true;
+//		StandByCamera.enabled = false;
 	}
 }

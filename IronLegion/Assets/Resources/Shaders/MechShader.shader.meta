@@ -1,0 +1,18 @@
+fileFormatVersion: 2
+guid: d108a2d443f735347ac5b7a8b3438541
+labels:
+- Material
+- Environment
+- Reflection
+- Mapping
+- ShaderForge
+- Shader
+- Texture
+- Textured
+- Coded
+- Script
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

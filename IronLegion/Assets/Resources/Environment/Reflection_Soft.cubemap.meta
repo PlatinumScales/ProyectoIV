@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 2b920e0a662b5914785644663888f091
+labels:
+- Lightmapped
+- Texture
+- Textured
+- Cubemap
+- Reflection
+- Environment
+- Mapping
+- Material
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

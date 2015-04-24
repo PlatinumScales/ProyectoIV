@@ -2116,7 +2116,7 @@ public static class PhotonNetwork
         // a scene object instantiated with network visibility has to contain a PhotonView
         if (prefabGo.GetComponent<PhotonView>() == null)
         {
-            Debug.LogError("Failed to Instantiate prefab:" + prefabName + ". Prefab must have a PhotonView component.");
+        ///    Debug.LogError("Failed to Instantiate prefab:" + prefabName + ". Prefab must have a PhotonView component.");
             return null;
         }
 

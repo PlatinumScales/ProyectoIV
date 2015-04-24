@@ -1,10 +1,37 @@
 ﻿<Properties>
-  <MonoDevelop.Ide.Workspace />
-  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\RoboShot.cs">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets\Scripts\VisualsScripts\GuiManager.cs">
     <Files>
-      <File FileName="Assets\Scripts\VisualsScripts\pauseMenu.cs" Line="57" Column="28" />
-      <File FileName="Assets\Caracters\Mechanoid\Scripts\CustomMechControl.cs" Line="335" Column="6" />
-      <File FileName="Assets\Scripts\RoboShot.cs" Line="32" Column="1" />
+      <File FileName="Assets\Scripts\Health.cs" Line="9" Column="3" />
+      <File FileName="Assets\Scripts\SpawnSpot.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\NetworkManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\RoboShot.cs" Line="1" Column="1" />
+      <File FileName="Assets\Caracters\Enemy\Scripts\AIEEnemy.cs" Line="153" Column="1" />
+      <File FileName="Assets\Scripts\VisualsScripts\CharacterLoader.cs" Line="1" Column="1" />
+      <File FileName="Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonNetwork.cs" Line="2729" Column="1" />
+      <File FileName="Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonPlayer.cs" Line="1" Column="1" />
+      <File FileName="Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonStatsGui.cs" Line="1" Column="1" />
+      <File FileName="Assets\Photon Unity Networking\Plugins\PhotonNetwork\CustomTypes.cs" Line="1" Column="1" />
+      <File FileName="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Enums.cs" Line="1" Column="1" />
+      <File FileName="Assets\Photon Unity Networking\Plugins\PhotonNetwork\Extensions.cs" Line="1" Column="1" />
+      <File FileName="Assets\Photon Unity Networking\Plugins\PhotonNetwork\FriendInfo.cs" Line="1" Column="1" />
+      <File FileName="Assets\Photon Unity Networking\UtilityScripts\OnJoinedInstantiate.cs" Line="1" Column="1" />
+      <File FileName="Assets\Photon Unity Networking\UtilityScripts\OnClickInstantiate.cs" Line="1" Column="1" />
+      <File FileName="Assets\Photon Unity Networking\UtilityScripts\HighlightOwnedGameObj.cs" Line="1" Column="1" />
+      <File FileName="Assets\Photon Unity Networking\readme.txt" Line="1" Column="1" />
+      <File FileName="Assets\Photon Unity Networking\Editor\PhotonNetwork\Views\PhotonAnimatorViewEditor.cs" Line="1" Column="1" />
+      <File FileName="Assets\Photon Unity Networking\Editor\PhotonNetwork\PunSceneSettings.cs" Line="1" Column="1" />
+      <File FileName="Assets\Photon Unity Networking\Plugins\PhotonNetwork\PhotonView.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerInfoScripts\PlayerDataManager.cs" Line="1" Column="1" />
+      <File FileName="Assets\Scripts\PlayerInfoScripts\StartNewGame.cs" Line="1" Column="1" />
+      <File FileName="Assets\Photon Unity Networking\UtilityScripts\ConnectAndJoinRandom.cs" Line="1" Column="1" />
+      <File FileName="Assets\InitSounds.cs" Line="14" Column="25" />
+      <File FileName="Assets\Photon Unity Networking\Plugins\PhotonNetwork\NetworkingPeer.cs" Line="1" Column="1" />
+      <File FileName="Assets\EndShotSound.cs" Line="9" Column="25" />
+      <File FileName="Assets\Scripts\VisualsScripts\GuiManager.cs" Line="28" Column="46" />
+      <File FileName="Assets\Scripts\VisualsScripts\AutoFade.cs" Line="64" Column="1" />
+      <File FileName="Assets\MultiPlaylink.cs" Line="8" Column="25" />
+      <File FileName="Assets\OptionsLinks.cs" Line="8" Column="45" />
     </Files>
   </MonoDevelop.Ide.Workbench>
   <MonoDevelop.Ide.DebuggingService.Breakpoints>

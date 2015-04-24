@@ -5,9 +5,14 @@ public class InitSounds : StateMachineBehaviour {
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-		GameObject.FindGameObjectWithTag ("Player").GetComponent<RoboShot>().CanShot = true;
+		//GameObject.FindGameObjectWithTag ("OnlinePlayer").GetComponent<RoboShot>().CanShot = false;
+		//GameObject.FindGameObjectWithTag ("Player").GetComponent<RoboShot>().CanShot = true;
+		Validate();
 	}
+	private void Validate(){
 
+		GameObject.FindWithTag ("Player").GetComponent<RoboShot>().CanShot = true;
+	}
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	//override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 	//
